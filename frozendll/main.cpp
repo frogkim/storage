@@ -3,10 +3,10 @@
 
 BOOL WINAPI DllMain(HINSTANCE hinstDLL,DWORD fdwReason,LPVOID lpvReserved)
 {
-    int     size_of_first_handle = sizeof(int);
-    const char*   name_of_first_handle = "frozen_trigger";
-    int     size_of_second_handle = sizeof(double)*4;
-    const char*   name_of_second_handle = "frozen_prices";
+	int     size_of_first_handle = sizeof(int);
+	const char*   name_of_first_handle = "frozen_trigger";
+	int     size_of_second_handle = sizeof(double)*4;
+	const char*   name_of_second_handle = "frozen_prices";
 
 	HANDLE handleOne;
 	HANDLE handleTwo;
@@ -42,11 +42,11 @@ BOOL WINAPI DllMain(HINSTANCE hinstDLL,DWORD fdwReason,LPVOID lpvReserved)
 			                size_of_second_handle,                // maximum object size (low-order DWORD)
 			                name_of_second_handle);
 			bufTwo = (LPTSTR) MapViewOfFile(
-							handleTwo,   // handle to map object
-		                    FILE_MAP_ALL_ACCESS, // read/write permission
-		                    0,
-		                    0,
-		                    size_of_second_handle);
+					handleTwo,   // handle to map object
+					FILE_MAP_ALL_ACCESS, // read/write permission
+					0,
+					0,
+					size_of_second_handle);
 			values = (double*) bufTwo;
 			break;
 		}
@@ -78,7 +78,7 @@ void	SetTrigger(int values)
 	triggers[0] = values;
 }
 
-int		GetTrigger()
+int	GetTrigger()
 {
 	return triggers[0];
 }
