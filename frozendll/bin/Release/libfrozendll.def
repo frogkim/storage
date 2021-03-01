@@ -1,7 +1,0 @@
-EXPORTS
-    GetTrigger @1
-    GetValues @2
-    SetTrigger @3
-    SetValues @4
-    triggers @5 DATA
-    values @6 DATA
