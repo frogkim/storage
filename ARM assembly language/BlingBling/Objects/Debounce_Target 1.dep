@@ -1,0 +1,8 @@
+Dependencies for Project 'Debounce', Target 'Target 1': (DO NOT MODIFY !)
+CompilerVersion: 5060750::V5.06 update 6 (build 750)::.\ARMCC
+F (.\hardware.s)(0x5F9A16B9)(--cpu Cortex-M4.fp.sp --pd "__EVAL SETA 1" -g --apcs=interwork -IC:\Users\frogkim\AppData\Local\Arm\Packs\SiliconLabs\GeckoPlatform_EFR32MG12P_DFP\2.7.3\Device\SiliconLabs\EFR32MG12P\Include-IC:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 531" --pd "EFR32MG12P332F1024GL125 SETA 1"--list .\listings\hardware.lst --xref -o .\objects\hardware.o --depend .\objects\hardware.d)
+I (EFR32MG12.inc)(0x5F932211)
+F (.\main.s)(0x5F9A2FCB)(--cpu Cortex-M4.fp.sp --pd "__EVAL SETA 1" -g --apcs=interwork -IC:\Users\frogkim\AppData\Local\Arm\Packs\SiliconLabs\GeckoPlatform_EFR32MG12P_DFP\2.7.3\Device\SiliconLabs\EFR32MG12P\Include-IC:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 531" --pd "EFR32MG12P332F1024GL125 SETA 1"--list .\listings\main.lst --xref -o .\objects\main.o --depend .\objects\main.d)
+I (EFR32MG12.inc)(0x5F932211)
+F (.\startup.s)(0x5F932230)(--cpu Cortex-M4.fp.sp --pd "__EVAL SETA 1" -g --apcs=interwork -IC:\Users\frogkim\AppData\Local\Arm\Packs\SiliconLabs\GeckoPlatform_EFR32MG12P_DFP\2.7.3\Device\SiliconLabs\EFR32MG12P\Include-IC:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 531" --pd "EFR32MG12P332F1024GL125 SETA 1"--list .\listings\startup.lst --xref -o .\objects\startup.o --depend .\objects\startup.d)
+I (EFR32MG12.inc)(0x5F932211)
