@@ -223,10 +223,14 @@ double  OnTester(void)
       }
       else
          return -1;
+      if(deal_volume < 0.01)
+         continue;
       if(deal_profit > 0)
          p_result++;
       avg_p += deal_profit / deal_volume;
    }
+   if(t_result == 0)
+      return 0.0;
    
    avg_p /= t_result;
    return avg_p * ((double)p_result/(double)t_result);
