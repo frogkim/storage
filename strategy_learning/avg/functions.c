@@ -25,13 +25,12 @@ int calculate(mytype prices, myavg avg, int cur)
 
     for(j=0; j<5; j++)
         for(k=0; k<4; k++)
-            if(calavg(prices, avg, 99840, cur, term[j], k) < 0)
-                return -1;
+            if(calavg(prices, avg, 99840, cur, term[j], j*4+k, k) < 0) return -1;
     printf("Currency : %d, Term : %d\n", cur, j);
     return 0;
 }
 
-int calavg(mytype prices, myavg avg, int length, int cur, int term, int ohlc)
+int calavg(mytype prices, myavg avg, int length, int cur, int term, int period, int ohlc)
 {
     int i;
     double temp=0;
@@ -40,18 +39,20 @@ int calavg(mytype prices, myavg avg, int length, int cur, int term, int ohlc)
         temp += prices[i][ohlc];
 
     // calculate first ratio
-    avg[i][ohlc] = temp / ohlc;
-    avg[i][ohlc] = (avg[i][ohlc] - prices[i][0])/ avg[i][ohlc];
+    if(term < 3) return -1;
+    avg[term-1][period] = temp / ohlc;
+    avg[term-1][period] = (avg[i][period] - prices[i][0])/ avg[i][period];
 
     // calculate ratio and assign
     for(i=term; i<length; i++)
     {
+        // calculate forward sum and avg
         temp -= prices[i-term][ohlc];
         temp += prices[i][ohlc];
-        avg[i][ohlc] = temp / term;
-        avg[i][ohlc] = (avg[i][ohlc] - prices[i][0])/ avg[i][ohlc];
+        avg[i][period] = temp / term;
+        avg[i][period] = (avg[i][period] - prices[i][0])/ avg[i][period];
 
-        if( temp == 0 )
+        if( temp < 0 )
         {
             printf("stop turned on. %d %d %d\n", cur, i, ohlc);
             return -1;

@@ -11,5 +11,5 @@ typedef double mytype[99840][4];
 typedef double myavg[99840][20];
 int check(mytype prices);
 int calculate(mytype prices, myavg avg, int cur);
-int calavg(mytype prices, myavg avg, int length, int cur, int term, int ohlc);
+int calavg(mytype prices, myavg avg, int length, int cur, int term, int period, int ohlc);
 #endif // HEADER_H_INCLUDED

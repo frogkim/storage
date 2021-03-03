@@ -35,3 +35,15 @@
 1614760166 source:d:\frozenfrog\dll\dataprocessing\main.c
 	"header.h"
 
+1614762644 source:d:\frozenfrog\dll\avg\functions.c
+	"header.h"
+
+1614762644 d:\frozenfrog\dll\avg\header.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<windows.h>
+
+1614761420 source:d:\frozenfrog\dll\avg\main.c
+	"header.h"
+

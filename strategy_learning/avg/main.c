@@ -2,16 +2,16 @@
 
 int main()
 {
-    int i,j;
+    int i,j,k;
     FILE *pFile[6];
+    mytype *prices;
+    myavg *avg;
+
     for(i=0; i<6; i++)
         pFile[i] = readfile(i);
 
-    mytype *prices;
     prices = (mytype*) malloc(sizeof(mytype)*6);
     memset(prices, 0, sizeof(mytype)*6);
-
-    myavg *avg;
     avg = (myavg*) malloc(sizeof(myavg)*6);
     memset(avg, 0, sizeof(myavg)*6);
 
@@ -25,9 +25,10 @@ int main()
     char* savefile = "avg.dat";
     printf("%s\n", savefile);
     FILE *pWFile = fopen(savefile,"wb");
-    for(i=144; i<99840-144; i++)
+    for(i=144; i<99840; i++)
         for(j=0;j<6;j++)
-            fwrite(&avg[j], sizeof(double), 20, pWFile);
+            for(k=0; k<20; k++)
+                fwrite(&avg[j][i][k], sizeof(double), 1, pWFile);
 
     for(i=0; i<6; i++)
         fclose(pFile[i]);
