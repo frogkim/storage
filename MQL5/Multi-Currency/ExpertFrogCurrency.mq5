@@ -134,27 +134,28 @@ void OnDeinit(const int reason)
 void OnTick(void)
   {
    if(stop) return;
-   /*
-   if(AccountInfoDouble(ACCOUNT_EQUITY) > equity)
-      equity = AccountInfoDouble(ACCOUNT_EQUITY);
-   if(AccountInfoDouble(ACCOUNT_EQUITY) / equity < 0.8)
+   equity = MathMax(AccountInfoDouble(ACCOUNT_EQUITY), equity);
+   if(AccountInfoDouble(ACCOUNT_EQUITY) / equity < 0.5)
    {
-      stop = true;
-      ExtExpert[i].Close();
-      return;
-   }
-   */
+         stop = true;
+         SYMBOLSTR[0].ExtExpert.Close();
+         return;
+   }   
    
    // signal calculate
-   double m_other_signals[6] = {};
+   double other_signals[6] = { 0 };
+   other_signals[0] = SYMBOLSTR[0].ExtExpert.Processing(0);
+   
+   if(other_signals[0] < -1e+50)
+      return;
+   /* multi trading
    for(int i=0; i<6; i++)
-   {
-      m_other_signals[i] = SYMBOLSTR[i].ExtExpert.Processing(0);
-      Print( m_other_signals[i]);
-   }
-//   Print(resultSum);
-   SYMBOLSTR[0].ExtExpert.PositionProcessing(0, m_other_signals);  // m_other_signal is useless in test1
-/*   
+      m_other_signals[i] = SYMBOLSTR[i].ExtExpert.Processing(i);
+   */
+   //Print(other_signals[0]);
+   SYMBOLSTR[0].ExtExpert.PositionProcessing(0, other_signals);  // m_other_signal is useless in test1
+   // Time controlled trading 
+/* 
    TimeGMT(frtime);
    if(frtime.hour > 21)
    {
@@ -168,48 +169,18 @@ void OnTick(void)
          }
       }
    }
-   for(int i=0; i<6; i++)
-   {
-      if(!ExtExpert[i].GetStop())
-         if(AccountInfoDouble(ACCOUNT_EQUITY)/equity < 0.8)
-            ExtExpert[i].SetStop(true);
-   }
-
    if(frtime.hour < 21)
    {
-      for(int i=0; i<6; i++)
+      if(AccountInfoDouble(ACCOUNT_EQUITY) / equity < 0.8)
       {
-         if(!ExtExpert[i].Processing(i))
-            return;
-
-         {
-            Print("processing Error");
-            stop = true;
-            return;
-         }
-
-      }
-      double m_other_signals[6] = {0};
+         stop = true;
+         ExtExpert[i].Close();
+         return;
+      }   
+      double m_other_signals[6] = { 0 };
       for(int i=0; i<6; i++)
-         m_other_signals[i] = ExtExpert[i].GetM();
-      
-      for(int i=0; i<6; i++)
-      {
-         string symbol = "";
-         switch(i)
-         {
-            case 0: symbol = "EURUSD"; break;
-            case 1: symbol = "GBPUSD"; break;      
-            case 2: symbol = "AUDUSD"; break;      
-            case 3: symbol = "USDCHF"; break;      
-            case 4: symbol = "USDCAD"; break;      
-            case 5: symbol = "USDJPY"; break;      
-            default: break;
-         }
-         if(symbol == Symbol())
-            ExtExpert[i].PositionProcessing(i, m_other_signals);
-      }
-   }
+         m_other_signals[i] = SYMBOLSTR[i].ExtExpert.Processing(0);
+         SYMBOLSTR[i].ExtExpert.PositionProcessing(i, m_other_signals);  // m_other_signal is useless in test1
 */      
   }
 //+------------------------------------------------------------------+
@@ -232,6 +203,35 @@ void OnTimer(void)
 double  OnTester(void)
 {
 //--- custom criterion optimization value (the higher, the better) 
+   if(stop) return 0;
+   
+   double avg_p = 0;
+   double deal_profit = 0.0;
+   double deal_volume = 0.0;
+   uint p_result = 0;
+   uint t_result = HistoryDealsTotal();
+   if(t_result == 0)
+      return 0;
+   ulong ticket_history_deal=0; 
+   
+   for(uint i=0;i<t_result;i++) 
+   { 
+      if((ticket_history_deal=HistoryDealGetTicket(i))>0) 
+      { 
+         deal_profit =HistoryDealGetDouble(ticket_history_deal,DEAL_PROFIT); 
+         deal_volume =HistoryDealGetDouble(ticket_history_deal,DEAL_VOLUME);
+      }
+      else
+         return -1;
+      if(deal_profit > 0)
+         p_result++;
+      avg_p += deal_profit / deal_volume;
+   }
+   
+   avg_p /= t_result;
+   return avg_p * ((double)p_result/(double)t_result);
+}
+/*
    int    min_trade = 250;
    double ret=0.0; 
    double array[]; 
@@ -241,8 +241,8 @@ double  OnTester(void)
    if(trades < min_trade)
       return(0);
       
-   double t_profit = 0;
-   double p_profit = 0;
+   double t_profit = 0; // total count
+   double p_profit = 0; // profit position count only
    for(int i=0; i<trades; i++)
    {
       if(array[i] > 0)
@@ -253,41 +253,19 @@ double  OnTester(void)
       else
          t_profit -= array[i];
    }
-      
-   //ret = AccountInfoDouble(ACCOUNT_EQUITY);
-   //ret = AccountInfoDouble(ACCOUNT_BALANCE) * p_profit / t_profit;
+
    double pass_rate =p_profit / t_profit;
-   /*
-   if(pass_rate < 0.6)
-      return(0.0);
-   */
+
+   // Test pass rate
+   //   if(pass_rate < 0.6)
+   //       return(0.0);
+
    ret = AccountInfoDouble(ACCOUNT_EQUITY) * pass_rate;
    return(ret);
-/*
-      
+*/
 
-//--- average result per trade 
-   double average_pl=0; 
-   for(int i=0;i<ArraySize(array);i++) 
-      average_pl+=array[i]; 
-   average_pl/=trades; 
-//--- display the message for the single-test mode 
-   if(MQLInfoInteger(MQL_TESTER) && !MQLInfoInteger(MQL_OPTIMIZATION)) 
-      PrintFormat("%s: Trades=%d, Average profit=%.2f",__FUNCTION__,trades,average_pl); 
-//--- calculate linear regression ratios for the profit graph 
-   double a,b,std_error; 
-   double chart[]; 
-   if(!CalculateLinearRegression(array,chart,a,b)) 
-      return (0); 
-//--- calculate the error of the chart deviation from the regression line 
-   if(!CalculateStdError(chart,a,b,std_error)) 
-      return (0); 
-//--- calculate the ratio of trend profits to the standard deviation 
-   ret=(std_error == 0.0) ? a*trades : a*trades/std_error; 
-//--- return custom criterion optimization value 
-   return(ret);       
-*/   
-}
+
+//--- By example
 bool GetTradeResultsToArray(double &pl_results[],double &volume) 
   { 
 //--- request the complete trading history 
