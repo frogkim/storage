@@ -120,6 +120,7 @@ class GUI:
 
     #exit event
     def Close(self):
+        self.machine.switch = 0
         self.exit = True
         self.win.destroy()
     
@@ -127,37 +128,35 @@ class GUI:
         self.machine = machine
 
     # start and stop
-    def _Start1(self):
+    def _CheckInit(self):
         if not self.initialize:
             self.status = "Not initialized"
             self.lbStatus.config(text=self.status)
-            return
-        message = self.machine.turn_one(True)
+            return False
+        return True
+    
+    def _Start1(self):
+        check = self._CheckInit()
+        if(check is False): return
+        message = self.machine.turnon(1)
         self.lbStatus.config(text=message)
 
     def _Start2(self):
-        if not self.initialize:
-            self.status = "Not initialized"
-            self.lbStatus.config(text=self.status)
-            return
-        message = self.machine.turn_two(True)
+        check = self._CheckInit()
+        if(check is False): return
+        message = self.machine.turnon(2)
         self.lbStatus.config(text=message)
 
     def _Start3(self):
-        if not self.initialize:
-            self.status = "Not initialized"
-            self.lbStatus.config(text=self.status)
-            return
-        message = self.machine.turn_three(True)
+        check = self._CheckInit()
+        if(check is False): return
+        message = self.machine.turnon(3)
         self.lbStatus.config(text=message)
 
     def _Stop(self):
         self.machine.reset()
-        self.machine.turn_one(False)
-        self.machine.turn_two(False)
-        self.machine.turn_three(False)
-        self.status = "Button turned off"
-        self.lbStatus.config(text=self.status)
+        message = self.machine.turnon(0)
+        self.lbStatus.config(text=message)
 
     # save and restore
     def _Save(self):
