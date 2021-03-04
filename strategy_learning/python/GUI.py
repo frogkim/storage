@@ -160,10 +160,7 @@ class GUI:
 
     # save and restore
     def _Save(self):
-        if not self.initialize:
-            self.status = "Not initialized"
-            self.lbStatus.config(text=self.status)
-            return
+        if not self._CheckInit(): return
         message = self.machine.save()
         self.lbStatus.config(text=message)
 

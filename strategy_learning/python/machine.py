@@ -25,6 +25,7 @@ class MACHINE:
         self.session = tf.Session()
 
         # data format information
+        # about urLinesAvg and urLinesInAnswer, refer to "dataloading(self)"
         self.tLines = 99840 # total lines of data
         self.urLinesInAvg = 144   # unreadable lines of avg data
         self.urLinesInAnswer = 11 # unreadable lines of ans data
@@ -134,16 +135,18 @@ class MACHINE:
         self.x_price = np.array(self.x_price)
         self.x_price = self.x_price[:, self.urLinesInAnswer:self.tLines-self.urLinesInAvg, :]
         
-        # In avg.dat, 99840-144 lines are stored
+        # In avg.dat, 99840-144 lines are stored. It starts index from 144 to 99840
+        # stored data's element size is 64 bits(float64). It should be changed to float32
         # Abandon last 11 lines to fit with y answer
-        # It will be fixed in Q-learning
+        
         self.x_avg = SetupAVG()
         self.x_avg = self.x_avg.reshape([self.tLines-self.urLinesInAvg, self.avgs*self.currencies])
         self.x_avg = self.x_avg[:self.lines, :]
-        self.x_avg = self.x_avg.astype(np.float32) # change data type double -> float
+        self.x_avg = self.x_avg.astype(np.float32) 
 
         # make hot-key
-        # In ans*.dat, last 11 lines are not stored.
+        # In ans*.dat, last 11 lines are not stored. It index is from 0 to 99840 - 11
+        # It will be fixed in Q-learning
         self.y_ans = np.zeros([self.currencies, self.tLines, self.states, self.actions])
         self.y_ans = self.y_ans.astype(np.float32)
         y_array = []    # temporary list to make minibatch
@@ -160,33 +163,28 @@ class MACHINE:
     def _build_network(self):
         layerlist = []
 
-        layer, pred, loss, train = self.neurals_1(0)
-        layerlist.append(layer)
-        self.pred.append(pred)
-        self.trainloss.append(loss)
-        self.train.append(train)
+        # placeholder X and Y
+        self.X = tf.placeholder(tf.float32, [None, self.input_size], name="input_x")
+        self.Y = []
+        for i in range(3): self.Y.append(tf.placeholder(shape=[None, self.states], dtype=tf.float32))
 
-        layer, pred, loss, train = self.neurals_1(1)
-        layerlist.append(layer)
-        self.pred.append(pred)
-        self.trainloss.append(loss)
-        self.train.append(train)
+        for i in range(3):
+            layer, pred, loss, train = self.neurals_1(i)
+            layerlist.append(layer)
+            self.pred.append(pred)
+            self.trainloss.append(loss)
+            self.train.append(train)
 
         pred, loss, train = self.neurals_2(layerlist)
         self.pred.append(pred)
         self.trainloss.append(loss)
         self.train.append(train)
 
+
     def neurals_1(self, name):
         self.net_name += "_" + str(name)
         weights = []
         with tf.variable_scope(self.net_name):
-
-            # placeholder X and Y
-            self.X = tf.placeholder(tf.float32, [None, self.input_size], name="input_x")
-            self.Y = []
-            for i in range(3): self.Y.append(tf.placeholder(shape=[None, self.states], dtype=tf.float32))
-            
             # Test #1
             # weights
             weight_name = self.net_name + "_1"
@@ -238,7 +236,7 @@ class MACHINE:
             weights.append(tf.get_variable(weight_name, shape=[self.neural_size, self.neural_size],
                                  initializer = tf.keras.initializers.glorot_uniform()))
             weight_name = self.net_name + "_3"
-            weights.append(tf.get_variable(weight_name, shape=[self.neural_size, self.actions],
+            weights.append(tf.get_variable(weight_name, shape=[self.neural_size, self.neural_size],
                                  initializer = tf.keras.initializers.glorot_uniform()))
             weight_name = self.net_name + "_4"
             weights.append(tf.get_variable(weight_name, shape=[self.neural_size, self.actions],
@@ -246,19 +244,23 @@ class MACHINE:
             weight_name = self.net_name + "_5"
             weights.append(tf.get_variable(weight_name, shape=[self.neural_size, self.actions],
                                  initializer = tf.keras.initializers.glorot_uniform()))
+            weight_name = self.net_name + "_6"
+            weights.append(tf.get_variable(weight_name, shape=[self.neural_size, self.actions],
+                                 initializer = tf.keras.initializers.glorot_uniform()))
             
             # Q prediction
             layer1 = tf.nn.tanh(tf.matmul(layerlist[0], weights[0]))
             layer2 = tf.nn.tanh(tf.matmul(layerlist[1], weights[1]))
-            layer = layer1 + layer2
+            layer3 = tf.nn.tanh(tf.matmul(layerlist[1], weights[1]))
+            layer = layer1 + layer2 + layer3
             loss = 0
-            pred1 = tf.nn.softmax(tf.nn.tanh(tf.matmul(layer2, weights[2])))
+            pred1 = tf.nn.softmax(tf.nn.tanh(tf.matmul(layer2, weights[3])))
             #loss += tf.reduce_mean(pred1)
             loss += tf.nn.softmax_cross_entropy_with_logits(labels = self.Y[0], logits = pred1)
-            pred2 = tf.nn.softmax(tf.nn.tanh(tf.matmul(layer2, weights[3])))
+            pred2 = tf.nn.softmax(tf.nn.tanh(tf.matmul(layer2, weights[4])))
             #loss += tf.reduce_mean(pred2)
             loss += tf.nn.softmax_cross_entropy_with_logits(labels = self.Y[1], logits = pred1)
-            pred3 = tf.nn.softmax(tf.nn.tanh(tf.matmul(layer2, weights[4])))
+            pred3 = tf.nn.softmax(tf.nn.tanh(tf.matmul(layer2, weights[5])))
             #loss += tf.reduce_mean(pred3)
             loss += tf.nn.softmax_cross_entropy_with_logits(labels = self.Y[2], logits = pred1)
             
@@ -273,6 +275,7 @@ class MACHINE:
         self.count = 0
         self.correct = 0
         self.turn = turn
+        self.loss = 0
 
     def updateGUI(self):
         self.SetShort(self.result[0])
@@ -293,10 +296,10 @@ class MACHINE:
             for j in range(self.states):
                 if( np.argmax(pred[i][j]) == np.argmax(self.y_stack[i][j]) ):
                     score += 1
-                    if( np.argmax(pred[i][j]) == 0):     self.result[0] += 1
-                    elif( np.argmax(pred[i][j]) == 1):   self.result[1] += 1
-                    else:                                self.result[2] += 1
-        return score
+                if( np.argmax(pred[i][j]) == 0):     self.result[0] += 1
+                elif( np.argmax(pred[i][j]) == 1):   self.result[1] += 1
+                else:                                self.result[2] += 1
+        return score, score / (self.minibatch*self.states)
 
     # main function
     def operate(self):
@@ -328,10 +331,16 @@ class MACHINE:
             self.y_stack = np.array(y_list)
             
             # predict
-            pred = self.predict(self.switch)
-            score = self.SetScore(pred)
+            pred = self.predict(3)
+            score, passrate = self.SetScore(pred)
+            if(self.y_stack[0,0,2] == 1):    loss, _ = self.update(0)
+            elif(self.y_stack[0,2,0] == 1):  loss, _ = self.update(1)
+            elif(self.y_stack[0,1,1] == 1):  loss, _ = self.update(2)
+            else:
+                self.count -= self.states * self.minibatch
+                continue
+            loss, _ = self.update(3)
             self.correct += score
-            loss, _ = self.update(self.switch)
             self.loss += loss
             
             # update GUI
@@ -350,7 +359,6 @@ class MACHINE:
     def update(self, index):
         #dict = {}
         #for i in range(3): dict['_Y[' + i + ']'] = 'y_stack[' + i + ']'
-
         return self.session.run([self.trainloss[index], self.train[index]], feed_dict={
                                     self.X: self.x_stack,
                                     self.Y[0]: self.y_stack[:,0],
