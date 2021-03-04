@@ -15,7 +15,7 @@ def FileString(cur_num):
 def SetupPrice(cur_num):
     rows = 99840
     cols = 4
-    filename = "./data/" + FileString(cur_num) + ".dat"
+    filename = "../data/" + FileString(cur_num) + ".dat"
     f = open(filename, "rb")
     price = np.fromfile(f, dtype=np.float64, count=-1, sep="", offset=0)
     price = price.reshape([rows, cols])
@@ -25,7 +25,7 @@ def SetupPrice(cur_num):
 def SetupAVG():
     rows = 99840-144
     cols = 20 * 6
-    filename = "./data/" + "avg.dat"
+    filename = "../data/" + "avg.dat"
     f = open(filename, "rb")
     avg = np.fromfile(f, dtype=np.float64, count=-1, sep="", offset=0)
     avg = avg.reshape([rows, cols])
@@ -35,7 +35,7 @@ def SetupAVG():
 def SetupANS(cur_num):
     rows = 99840-11
     cols = 3
-    filename = "./data/" + "ans" + FileString(cur_num) + ".dat"
+    filename = "../data/" + "ans" + FileString(cur_num) + ".dat"
     f = open(filename, "rb")
     ans = np.fromfile(f, dtype=np.int32, count=-1, sep="", offset=0)
     ans = ans.reshape([rows, cols])
