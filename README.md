@@ -8,5 +8,5 @@
 ### 3. Python  
   - Trading program with machine learning.  
 (plan)  
-  - apply LSTM logics to learning
-  - apply Q-learning to find actions
+To apply LSTM logics to learning  
+To apply Q-learning to find actions  
