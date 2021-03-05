@@ -1,4 +1,22 @@
-- written in Feb.28.2021
+--- Future plan ---  
+1. To change learning algorithm as LSTM  
+2. To change finding action algorithm as Q-learning  
+(done) To apply softmax to predict value  
+(done) To apply minibatch  
+
+- Updates in Mar.4.2021  
+1. adjustment about "python"  
+  Softmax function is applied
+  minibatch is applied  
+  dataloading() in function.py is changed.  
+  avg array consists of [99840 - 144 - 11, 120]. Each currency data is concatenated to the same row.  
+  ans array consists of [99840 - 144 - 11, 3(states), 3(actions)].  
+  144 and 11 is caused that avg's maximum period is 144, and ans is made by consecutive 11 timeframe.  
+
+2. "avg" is chagned  
+  This code generates [99840 - 144, 120] data sets.
+
+- Updates in Feb.28.2021
 1. "mql5 and communicatie" communicate each other with "frozendll."
 
   frozendll.dll is to provide shared memory.
@@ -20,8 +38,3 @@
   MACHINE.py imports functions from fucntion.py.
   In function.py, there are about loarding prices data.
   
---- Future plan ---
-1. To change learning algorithm as LSTM
-2. To apply softmax to predict value
-3. To apply minibatch
-4. To change finding action algorithm as Q-learning
