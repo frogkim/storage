@@ -208,14 +208,11 @@ class MACHINE:
             layer2 = tf.nn.tanh(tf.matmul(layer1, weights[1]))
             loss = 0
             pred1 = tf.nn.softmax(tf.nn.tanh(tf.matmul(layer2, weights[2])))
-            #loss += tf.reduce_mean(pred1)
             loss += tf.nn.softmax_cross_entropy_with_logits(labels = self.Y[0], logits = pred1)
             pred2 = tf.nn.softmax(tf.nn.tanh(tf.matmul(layer2, weights[3])))
-            #loss += tf.reduce_mean(pred2)
-            loss += tf.nn.softmax_cross_entropy_with_logits(labels = self.Y[1], logits = pred1)
+            loss += tf.nn.softmax_cross_entropy_with_logits(labels = self.Y[1], logits = pred2)
             pred3 = tf.nn.softmax(tf.nn.tanh(tf.matmul(layer2, weights[4])))
-            #loss += tf.reduce_mean(pred3)
-            loss += tf.nn.softmax_cross_entropy_with_logits(labels = self.Y[2], logits = pred1)
+            loss += tf.nn.softmax_cross_entropy_with_logits(labels = self.Y[2], logits = pred3)
             
             # Loss function
             loss = tf.reduce_mean(loss)
@@ -251,18 +248,17 @@ class MACHINE:
             # Q prediction
             layer1 = tf.nn.tanh(tf.matmul(layerlist[0], weights[0]))
             layer2 = tf.nn.tanh(tf.matmul(layerlist[1], weights[1]))
-            layer3 = tf.nn.tanh(tf.matmul(layerlist[1], weights[1]))
+            layer3 = tf.nn.tanh(tf.matmul(layerlist[2], weights[1]))
             layer = layer1 + layer2 + layer3
             loss = 0
-            pred1 = tf.nn.softmax(tf.nn.tanh(tf.matmul(layer2, weights[3])))
-            #loss += tf.reduce_mean(pred1)
+            pred1 = tf.nn.softmax(tf.nn.tanh(tf.matmul(layer, weights[3])))
             loss += tf.nn.softmax_cross_entropy_with_logits(labels = self.Y[0], logits = pred1)
-            pred2 = tf.nn.softmax(tf.nn.tanh(tf.matmul(layer2, weights[4])))
-            #loss += tf.reduce_mean(pred2)
-            loss += tf.nn.softmax_cross_entropy_with_logits(labels = self.Y[1], logits = pred1)
-            pred3 = tf.nn.softmax(tf.nn.tanh(tf.matmul(layer2, weights[5])))
-            #loss += tf.reduce_mean(pred3)
-            loss += tf.nn.softmax_cross_entropy_with_logits(labels = self.Y[2], logits = pred1)
+
+            pred2 = tf.nn.softmax(tf.nn.tanh(tf.matmul(layer, weights[4])))
+            loss += tf.nn.softmax_cross_entropy_with_logits(labels = self.Y[1], logits = pred2)
+
+            pred3 = tf.nn.softmax(tf.nn.tanh(tf.matmul(layer, weights[5])))
+            loss += tf.nn.softmax_cross_entropy_with_logits(labels = self.Y[2], logits = pred3)
             
             # Loss function
             loss = tf.reduce_mean(loss)
