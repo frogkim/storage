@@ -7,6 +7,6 @@
     Auto trading code with 20 signals and 6 currencies.
 ### 3. Python  
   - Trading program with machine learning.  
-  - (plan)
+  (plan)
   - apply LSTM logics to learning
   - apply Q-learning to find actions
