@@ -1,4 +1,9 @@
 # storage - since Feb.28.2021  
+### Current working  
+- Plan to use git-lfs.
+- LSTM is applied, but it contains venv with tensorflow, so file size is large. It is not uploaded, yet.  
+
+
 ### 1. embedded  
   - Haloween ornament(ARM assembly language)
   - Brewing helper(C, working)  
