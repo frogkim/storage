@@ -1,6 +1,8 @@
 --- Future plan ---  
-1. To change learning algorithm as LSTM  
-2. To change finding action algorithm as Q-learning  
+0. Split machine.py files  
+Depend on their functions, it is to plan to split machine.py to machine, neural network, play.
+2. To change learning algorithm as LSTM  
+3. To change finding action algorithm as Q-learning  
 (done) To apply softmax to predict value  
 (done) To apply minibatch  
 
