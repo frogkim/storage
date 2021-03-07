@@ -43,7 +43,6 @@ class MACHINE:
         self.learning_sample_lines = 20 # learning sample lines
         self.neural_size = 128
         self.pred = []
-        self.trainloss = []
         self.train = []
         self.x_input_size = self.currencies * self.avgs * self.learning_sample_lines
         
@@ -166,18 +165,15 @@ class MACHINE:
         # placeholder X and Y
         self.X = tf.placeholder(tf.float32, [None, self.input_size], name="input_x")
         self.Y = []
-        for i in range(3): self.Y.append(tf.placeholder(shape=[None, self.states], dtype=tf.float32))
+        for i in range(3): 
+            self.Y.append(tf.placeholder(shape=[None, self.states], dtype=tf.float32))
 
-        for i in range(3):
-            layer, pred, loss, train = self.neurals_1(i)
+        for i in range(3): 
+            layer, train = self.neurals_1(i)
             layerlist.append(layer)
-            self.pred.append(pred)
-            self.trainloss.append(loss)
             self.train.append(train)
 
-        pred, loss, train = self.neurals_2(layerlist)
-        self.pred.append(pred)
-        self.trainloss.append(loss)
+        self.pred, self.trainloss, train = self.neurals_2(layerlist)
         self.train.append(train)
 
 
@@ -206,6 +202,7 @@ class MACHINE:
             # Q prediction
             layer1 = tf.nn.tanh(tf.matmul(self.X, weights[0]))
             layer2 = tf.nn.tanh(tf.matmul(layer1, weights[1]))
+            ### useless delete
             loss = 0
             pred1 = tf.nn.softmax(tf.nn.tanh(tf.matmul(layer2, weights[2])))
             loss += tf.nn.softmax_cross_entropy_with_logits(labels = self.Y[0], logits = pred1)
@@ -218,7 +215,7 @@ class MACHINE:
             loss = tf.reduce_mean(loss)
             grads_and_vars = self.optimizer.compute_gradients(loss, weights)
             train = self.optimizer.apply_gradients(grads_and_vars)
-            return layer2, [pred1, pred2, pred3], loss, train
+            return layer2, train
             
 
     def neurals_2(self, layerlist):
@@ -248,7 +245,7 @@ class MACHINE:
             # Q prediction
             layer1 = tf.nn.tanh(tf.matmul(layerlist[0], weights[0]))
             layer2 = tf.nn.tanh(tf.matmul(layerlist[1], weights[1]))
-            layer3 = tf.nn.tanh(tf.matmul(layerlist[2], weights[1]))
+            layer3 = tf.nn.tanh(tf.matmul(layerlist[2], weights[2]))
             layer = layer1 + layer2 + layer3
             loss = 0
             pred1 = tf.nn.softmax(tf.nn.tanh(tf.matmul(layer, weights[3])))
@@ -300,6 +297,7 @@ class MACHINE:
     # main function
     def operate(self):
         self.reset()
+        balance = 0
         while(1):
             if self.gui.exit is True: break
             if(self.switch == 0): continue
@@ -310,8 +308,6 @@ class MACHINE:
             
             x_list = []
             y_list = []
-            
-            self.count += self.states * self.minibatch
 
             # stack data list
             for i in range(self.minibatch):
@@ -326,19 +322,22 @@ class MACHINE:
             self.x_stack = np.array(x_list)
             self.y_stack = np.array(y_list)
             
-            # predict
-            pred = self.predict(3)
-            score, passrate = self.SetScore(pred)
-            if(self.y_stack[0,0,2] == 1):    loss, _ = self.update(0)
-            elif(self.y_stack[0,2,0] == 1):  loss, _ = self.update(1)
-            elif(self.y_stack[0,1,1] == 1):  loss, _ = self.update(2)
+            # predict - to avoid kink, use balance variable
+            if(self.y_stack[0,0,2] == 1):    
+                if not (balance % 3 == 0): continue
+            elif(self.y_stack[0,2,0] == 1):  
+                if not (balance % 3 == 1): continue
             else:
-                self.count -= self.states * self.minibatch
-                continue
+                if not (balance % 3 == 2): continue
+
+            pred = self.predict()
+            _, _ = self.update(balance%3)
+            balance += 1
+            score, passrate = self.SetScore(pred)
             loss, _ = self.update(3)
             self.correct += score
             self.loss += loss
-            
+            self.count += self.states * self.minibatch
             # update GUI
             self.updateGUI()
 
@@ -348,14 +347,14 @@ class MACHINE:
             continue # return to while
 
     # build network    # predict
-    def predict(self, index):
-        return self.session.run(self.pred[index], feed_dict={self.X: self.x_stack})
+    def predict(self):
+        return self.session.run(self.pred, feed_dict={self.X: self.x_stack})
 
     # learning
     def update(self, index):
         #dict = {}
         #for i in range(3): dict['_Y[' + i + ']'] = 'y_stack[' + i + ']'
-        return self.session.run([self.trainloss[index], self.train[index]], feed_dict={
+        return self.session.run([self.trainloss, self.train[index]], feed_dict={
                                     self.X: self.x_stack,
                                     self.Y[0]: self.y_stack[:,0],
                                     self.Y[1]: self.y_stack[:,1], 
