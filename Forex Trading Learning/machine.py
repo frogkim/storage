@@ -110,7 +110,7 @@ class MACHINE:
     def _setupPrice(self, cur_num):
         rows = 99840
         cols = 4
-        filename = "../data/" + self._fileString(cur_num) + ".dat"
+        filename = "./data/" + self._fileString(cur_num) + ".dat"
         f = open(filename, "rb")
         price = np.fromfile(f, dtype=np.float64, count=-1, sep="", offset=0)
         price = price.reshape([rows, cols])
@@ -120,7 +120,7 @@ class MACHINE:
     def _setupAVG(self):
         rows = 99840 - 144
         cols = 20 * 6
-        filename = "../data/" + "avg.dat"
+        filename = "./data/" + "avg.dat"
         f = open(filename, "rb")
         avg = np.fromfile(f, dtype=np.float64, count=-1, sep="", offset=0)
         avg = avg.reshape([rows, cols])
