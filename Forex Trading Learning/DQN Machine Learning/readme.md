@@ -56,8 +56,8 @@ There are two neural networks, target and main.
         
         # The machine optimize Q_stack with bellman equation backward
         for i in range(oneGameTime - 2, -1):
-        reward_next = np.max(q_stack[i + 1])
-        q_stack[i, actions[i]] += gamma * reward_next        
+            reward_next = np.max(q_stack[i + 1])
+            q_stack[i, actions[i]] += gamma * reward_next        
 
         # The machin update main network (graph is for tensorboard)
         _, _, graph = self.mainDQN.Update(x_stack, y_stack)
