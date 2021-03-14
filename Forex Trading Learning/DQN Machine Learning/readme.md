@@ -10,7 +10,7 @@ Result is stored, and the machine is learned by its data with Q-learning.
 4. Conclusion
 
 ### 1. Structure
-![Neural Net]("https://github.com/frogkim/publishdata/blob/main/images/ForexTradingLearning/structure.png")
+![Neural Net](https://github.com/frogkim/publishdata/blob/main/images/ForexTradingLearning/structure.png)  
 There are two Newrual
 ### 2. Structure
 <img src="https://github.com/frogkim/publishdata/blob/main/images/ForexTradingLearning/dqn.png">
