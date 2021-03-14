@@ -32,8 +32,8 @@ trading.py
 There are two neural networks, target and main.
         
         <neurals.py>
-        - This code do not use tensorflow's lstm module
-        - to customize lstm algorism easily
+        # This code do not use tensorflow's lstm module
+        # to customize lstm algorism easily
         def _LSTM(self, i_data, short, long, w_list, b_list):
             i_t = tf.matmul(i_data, w_list[0]) + tf.matmul(short, w_list[1]) + b_list[0]
             i_t = tf.nn.sigmoid(i_t)
@@ -50,19 +50,19 @@ There are two neural networks, target and main.
             return o_data, short, long
 
         <machine.py>
-        - The machine predict rewards with target network and store in Q_stack
+        # The machine predict rewards with target network and store in Q_stack
         prediction = self.targetDQN.Predict(x_stack)
         q_stack[i, action] = reward
         
-        - The machine optimize Q_stack with bellman equation backward
+        # The machine optimize Q_stack with bellman equation backward
         for i in range(oneGameTime - 2, -1):
         reward_next = np.max(q_stack[i + 1])
         q_stack[i, actions[i]] += gamma * reward_next        
 
-        - The machin update main network (graph is for tensorboard)
+        # The machin update main network (graph is for tensorboard)
         _, _, graph = self.mainDQN.Update(x_stack, y_stack)
 
-        - Target network copies nuerals of main network very 200 updates end
+        # Target network copies nuerals of main network very 200 updates end
         if self.count == 200:
             self.targetDQN.Copy(self.mainDQN)        
 
