@@ -1,25 +1,88 @@
 # Forex Trading Machine
-## Abstract 
+## Summary
 
 Input six difference currency pairs. The machine interprets states with LSTM, and decides its position.
-Result is stored, and the machine is learned by its data with Q-learning.
+Result is stored, and the machine is learned by its data with Q-learning.  
 
-1. Structure
-2. Application screen
-3. Result
-4. Conclusion
+execute.py  
+    - Main function. Create gui and machine object  
+
+GUI.py  
+    - GUI class    
+    - Show progress and control machine operation.  
+
+machine.py  
+    - Create neural-net object and trading object  
+    - Collect input data and command orders about machine learning  
+    - Predict optimize action and test via trading object  
+    - Update neural nets with Q-learning algorithm  
+    - When predicting, it uses target Network but when updating, it uses main Network  
+    - Target Network copies neurals of main Network when five steps updates are ended.  
+  
+neurals.py  
+    - Create neural-net Tensors  
+    - Receive input data from machine object and operate learning process with LSTM algorithm  
+
+trading.py  
+    - Calculate profit and loss when the machine opens or closes position  
+    - Update result data and store as text file  
 
 ### 1. Structure
 ![Neural Net](https://github.com/frogkim/publishdata/blob/main/images/ForexTradingLearning/structure.png)  
-There are two Newrual  
+There are two neural networks, target and main.
+        
+        <neurals.py>
+        - This code do not use tensorflow's lstm module
+        - to customize lstm algorism easily
+        def _LSTM(self, i_data, short, long, w_list, b_list):
+            i_t = tf.matmul(i_data, w_list[0]) + tf.matmul(short, w_list[1]) + b_list[0]
+            i_t = tf.nn.sigmoid(i_t)
+            f_t = tf.matmul(i_data, w_list[2]) + tf.matmul(short, w_list[3]) + b_list[1]
+            f_t = tf.nn.sigmoid(f_t)
+            o_t = tf.matmul(i_data, w_list[4]) + tf.matmul(short, w_list[5]) + b_list[2]
+            o_t = tf.nn.sigmoid(o_t)
+            g_t = tf.matmul(i_data, w_list[6]) + tf.matmul(short, w_list[7]) + b_list[3]
+            g_t = tf.nn.tanh(g_t)
+    
+            long = f_t * long + i_t * g_t
+            short = o_t * tf.nn.tanh(long)
+            o_data = short
+            return o_data, short, long
+
+        <machine.py>
+        - The machine predict rewards with target network and store in Q_stack
+        prediction = self.targetDQN.Predict(x_stack)
+        q_stack[i, action] = reward
+        
+        - The machine optimize Q_stack with bellman equation backward
+        for i in range(oneGameTime - 2, -1):
+        reward_next = np.max(q_stack[i + 1])
+        q_stack[i, actions[i]] += gamma * reward_next        
+
+        - The machin update main network (graph is for tensorboard)
+        _, _, graph = self.mainDQN.Update(x_stack, y_stack)
+
+        - Target network copies nuerals of main network very 200 updates end
+        if self.count == 200:
+            self.targetDQN.Copy(self.mainDQN)        
+
 ### 2. Application screen
 ![GUI](https://github.com/frogkim/publishdata/blob/main/images/ForexTradingLearning/dqn.png)    
-  
+  This code is made with gui interface to control machine conveniently.  
+
 ### 3. Reulst
 ![Result Text](https://github.com/frogkim/publishdata/blob/main/images/ForexTradingLearning/result.png)  
-![Result Tensorboard](https://github.com/frogkim/publishdata/blob/main/images/ForexTradingLearning/tensorboard.png)  
+This is "result.txt" file. Trading result looks bad.  
 
-### 4. Conclusion
+
+![Result Tensorboard](https://github.com/frogkim/publishdata/blob/main/images/ForexTradingLearning/tensorboard.png)  
+It is a graph about difference between logits and labels.  
+It shows that trading is successful.  
+
+### 4. Conclusion  
+Trading result is not good, but it shows it successfully reduces its difference between prediction and labels.  
+It is supposed that learning target is not adequate.  
+
 
 ### Reference  
 Mnih, V., Kavukcuoglu, K., Silver, D. et al.  Human-level control through deep reinforcement learning. Nature 518, 529–533 (2015).  
