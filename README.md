@@ -1,8 +1,9 @@
 # storage - since Feb.28.2021  
 ### Current working  
-- Plan to use git-lfs.
-- LSTM is applied, but it contains venv with tensorflow, so file size is large. It is not uploaded, yet.  
-
+To adjust python class.  
+- split machine.py to several classes.  
+To add play class.  
+- Change to score machine's result
 
 ### 1. embedded  
   - Haloween ornament(ARM assembly language)
@@ -13,5 +14,6 @@
 ### 3. Python  
   - Trading program with machine learning.  
 (plan)  
-To apply LSTM logics to learning  
+(done) To apply LSTM logics to learning  
 To apply Q-learning to find actions  
+To visualize machine learning result
