@@ -11,13 +11,13 @@ Result is stored, and the machine is learned by its data with Q-learning.
 
 ### 1. Structure
 ![Neural Net](https://github.com/frogkim/publishdata/blob/main/images/ForexTradingLearning/structure.png)  
-There are two Newrual
-### 2. Structure
-<img src="https://github.com/frogkim/publishdata/blob/main/images/ForexTradingLearning/dqn.png">
-
+There are two Newrual  
+### 2. Application screen
+![GUI](https://github.com/frogkim/publishdata/blob/main/images/ForexTradingLearning/dqn.png)    
+  
 ### 3. Reulst
-<img src="https://github.com/frogkim/publishdata/blob/main/images/ForexTradingLearning/result.png">
-<img src="https://github.com/frogkim/publishdata/blob/main/images/ForexTradingLearning/tensorboard.png">
+![Result Text](https://github.com/frogkim/publishdata/blob/main/images/ForexTradingLearning/result.png)  
+![Result Tensorboard](https://github.com/frogkim/publishdata/blob/main/images/ForexTradingLearning/tensorboard.png)  
 
 ### 4. Conclusion
 
