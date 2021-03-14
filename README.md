@@ -1,10 +1,22 @@
-# storage - since Feb.28.2021  
-### Current Working
-	- Brewing Helper 
+# storage - since Feb.28.2021
+### last update - Mar, 14, 2021
+### Current Working - Brewing Helper 
+	-Server
+		Check ethanol level and temperature.
+		Store data in micro machine
+		Transfer data with client via bluetooth.
+		It will be created with C in Simplicity Studio.
+	
+	-Client
+		Communicate server via bluetooth.
+		It will be created as smart phone application with Cotlin and Java.
+	
 
-### 1. Embedded  
+### 1. Forex Trading Machine
+  - FX Trading learning with Q-learning and LSTM.
+  - Input data created via C.
+
+### 2. Embedded  
   - Haloween ornament(ARM assembly language)
-  - Brewing helper(C, working)  
+  - (working) Brewing helper(C, Java, Cotlin)
 
-### 2. Q-learning
-  - FX Trading training with Tensorflow
