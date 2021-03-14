@@ -10,8 +10,16 @@ Result is stored, and the machine is learned by its data with Q-learning.
 4. Conclusion
 
 ### 1. Structure
+![Neural Net]("https://github.com/frogkim/publishdata/blob/main/images/ForexTradingLearning/structure.png")
+There are two Newrual
+### 2. Structure
+<img src="https://github.com/frogkim/publishdata/blob/main/images/ForexTradingLearning/dqn.png">
 
-<img src="https://github.com/frogkim/publishdata/blob/main/images/ForexTradingLearning/structure.png">
+### 3. Reulst
+<img src="https://github.com/frogkim/publishdata/blob/main/images/ForexTradingLearning/result.png">
+<img src="https://github.com/frogkim/publishdata/blob/main/images/ForexTradingLearning/tensorboard.png">
+
+### 4. Conclusion
 
 ### Reference  
 Mnih, V., Kavukcuoglu, K., Silver, D. et al.  Human-level control through deep reinforcement learning. Nature 518, 529–533 (2015).  
