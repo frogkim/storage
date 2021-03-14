@@ -33,8 +33,8 @@ class TRADING:
         self.long = self.long_win + self.long_loss
         self.short = self.short_win + self.short_loss
 
-        self.gui.SetBalance(round(self.balance, 4))
-        self.gui.SetDrawDown(self.drawDown)
+        self.gui.SetBalance("{:0.4f}".format(self.balance))
+        self.gui.SetDrawDown("{:0.2f} %".format(self.drawDown))
         self.gui.SetLong(self.long)
         self.gui.SetLongWin(self.long_win)
         self.gui.SetLongLoss(self.long_loss)
@@ -43,8 +43,8 @@ class TRADING:
         self.gui.SetShortWin(self.short_win)
         self.gui.SetShortLoss(self.short_loss)
 
-        if self.long > 0: self.gui.SetLongRate(round(self.long_win / self.long, 4))
-        if self.short > 0: self.gui.SetShortRate(round(self.short_win / self.short, 4))
+        if self.long > 0: self.gui.SetLongRate(("{:0.4f}".format(self.long_win / self.long)))
+        if self.short > 0: self.gui.SetShortRate(("{:0.4f}".format(self.short_win / self.short)))
 
     def Reset(self, step):
         if self.long != 0 and self.short != 0:
@@ -120,7 +120,7 @@ class TRADING:
         self.balance += result * lot
         if self.maxBalance < self.balance: self.maxBalance = self.balance
         if self.minBalance > self.balance: self.minBalance = self.balance
-        self.drawDown = round(((self.maxBalance - self.minBalance) / self.maxBalance) * 100, 2)
+        self.drawDown = ((self.maxBalance - self.minBalance) / self.maxBalance) * 100
         self.UpdateGUI()
         return result
 
@@ -140,5 +140,4 @@ class TRADING:
                 self.long_win += 1
             else:
                 self.long_loss += 1
-
         return result

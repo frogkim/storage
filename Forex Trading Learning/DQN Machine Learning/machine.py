@@ -1,4 +1,5 @@
 import tensorflow.compat.v1 as tf
+
 tf.disable_v2_behavior()
 import numpy as np
 import random, os
@@ -53,7 +54,6 @@ class MACHINE:
 
     def TurnOff(self):
         self.mainDQN.GraphClose()
-
 
     def SetSwitch(self, value):
         self.switch = value
@@ -129,35 +129,6 @@ class MACHINE:
 
     # main function
     def Operate(self):
-        """
-            Mnih, V., Kavukcuoglu, K., Silver, D. et al.
-            Human-level control through deep reinforcement learning. Nature 518, 529–533 (2015).
-            https://doi.org/10.1038/nature14236
-            
-            Algorithm 1: deep Q-learning with experience replay
-            Initialize replay memory D to capacity N
-            Initialize action-value function  with random weights θ
-            Initialize target action-value function  with weights θ^− = θ
-            
-            For episode = 1, M do
-                Initialize sequence s_1 = {x_1} and preprocessed sequence Φ_1 = Φ(s_1)
-                For t = 1,T do
-                    With probability ε select a random action a_t
-                    otherwise select a_t = argmax_a Q(Φ(s_t), a; theta)
-                    Execute action at in emulator and observe reward rt and image x_t+1
-                    Set s_t+1 = s_t, a_t, x_t+1 and preprocess 
-                    Store transition (Φ_t, a_t, r_t, Φ_t+1) in D
-                    Sample random minibatch of transitions(Φ_t, a_t, r_t, Φ_t+1) from D
-                    Set 
-                        y_j = r_j 						if episode termnmiates ate step j+1
-                    or	y_j = r_j + gamma * max_d Q^ (Φ_j+1, a'; θ^−)		otherwise
-            
-                    Perform a gradient descent step on (y_j - Q(Φ_j, a_j ; θ) )^2
-                    with respect to the network parameters θ
-                    Every C steps reset Q^ = Q
-                End For
-            End For            
-            """
         startIndex = 1
         totalIndex = 99840 - 144
         minibatch = 10
@@ -167,8 +138,6 @@ class MACHINE:
 
         epsilon = 0.2
         gamma = 0.99
-        reward = 0
-        action = 1
         state = 1
         step = 0
 
@@ -178,18 +147,18 @@ class MACHINE:
             q_stack = np.zeros([oneGameTime, 3])
             actions = np.ones(oneGameTime)
             self.count += 1
-            index = random.randrange(startIndex + learning_sample_lines, totalIndex - oneGameTime)
+            index = random.randrange(startIndex + learning_sample_lines, totalIndex - oneGameTime - 1)
             x_sample = self.x_avg[index - learning_sample_lines + 1: index + oneGameTime + 1, :]
             for i in range(oneGameTime):
                 if self.switch == 0: break
                 if random.random() < epsilon:
                     action = random.randrange(0, 3, 1)
                 else:
-                    x_stack = x_sample[i:i+learning_sample_lines, :]
+                    x_stack = x_sample[i:i + learning_sample_lines, :]
                     x_stack = x_stack.reshape([1, learning_sample_lines, avgs])
                     x_stack = self._normalize(x_stack)
                     prediction = self.targetDQN.Predict(x_stack)
-                    action = np.argmax(prediction[0,0])
+                    action = np.argmax(prediction[0, 0])
                 reward = self.trading.Play(i, state, action)
                 # In this game, the player cannot affect to environment
                 # It is not used to store state
@@ -205,7 +174,7 @@ class MACHINE:
             x_stack = []
             y_stack = []
             for i in range(minibatch):
-                index = random.randint(0, oneGameTime-1)
+                index = random.randint(0, oneGameTime - 1)
                 x_stack.append(self._normalize(x_sample[index:index + learning_sample_lines, :]))
                 y_stack.append(q_stack[index])
             x_stack = np.array(x_stack)
@@ -223,5 +192,4 @@ class MACHINE:
                 self.Reset()
                 self.trading.Reset(step)
                 self.Save()
-
 

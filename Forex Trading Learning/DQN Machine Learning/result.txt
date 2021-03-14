@@ -275,3 +275,4 @@ Step : 54800, Balance : 983.0656, DrawDown : 1.70, Long : 0.5019, Short : 0.4730
 Step : 55000, Balance : 984.1304, DrawDown : 1.60, Long : 0.4810, Short : 0.4708
 Step : 55200, Balance : 984.4076, DrawDown : 1.56, Long : 0.4837, Short : 0.4811
 Step : 55400, Balance : 984.4269, DrawDown : 1.56, Long : 0.4851, Short : 0.4760
+Step : 200, Balance : 984.4559, DrawDown : 1.56, Long : 0.4729, Short : 0.4726

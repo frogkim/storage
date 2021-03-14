@@ -14,7 +14,7 @@ class NUERALS:
         self.input_size = 120
         self.output_size = 3
         self.neural_size = 128
-        self.l_rate = 1e-4
+        self.l_rate = 1e-3
         self.activation = tf.nn.relu
         self.optimizer = tf.train.RMSPropOptimizer(learning_rate=self.l_rate)
 
