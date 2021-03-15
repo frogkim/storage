@@ -13,7 +13,8 @@
 	
 
 ### 1. Forex Trading Machine
-  - FX Trading learning with Q-learning and LSTM.
+  - FX Trading learning is created with Python and Tensorflow library.
+  - This machine operates recognizing state with LSTM and learning with Q-learning.
   - Input data created via C.
 
 ### 2. Embedded  

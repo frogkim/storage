@@ -75,7 +75,7 @@ There are two neural networks, target and main.
 
 ### 2. Application screen
 ![GUI](https://github.com/frogkim/publishdata/blob/main/images/ForexTradingLearning/dqn.png)    
-  This code is made with gui interface to control machine conveniently.  
+  tkinter is used for gui interface. It helps to control machine conveniently.  
 
 ### 3. Reulst
 ![Result Text](https://github.com/frogkim/publishdata/blob/main/images/ForexTradingLearning/result.png)  
