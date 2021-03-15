@@ -19,6 +19,7 @@ class MACHINE:
         self.session = tf.Session()
         self.mainDQN = NUERALS(self.session, "main")
         self.targetDQN = NUERALS(self.session, "target")
+        self.targetDQN.CopyOps(self.mainDQN)
 
         # setting for data -- must be operated after making network
         self.savemodel = './save/model'
@@ -147,25 +148,27 @@ class MACHINE:
             q_stack = np.zeros([oneGameTime, 3])
             actions = np.ones(oneGameTime)
             self.count += 1
-            index = random.randrange(startIndex + learning_sample_lines, totalIndex - oneGameTime - 1)
-            x_sample = self.x_avg[index - learning_sample_lines + 1: index + oneGameTime + 1, :]
+            index = random.randrange(startIndex, totalIndex - oneGameTime -learning_sample_lines - 1)
+            x_sample = self.x_avg[index: index + learning_sample_lines+ oneGameTime, :]
             for i in range(oneGameTime):
                 if self.switch == 0: break
                 if random.random() < epsilon:
-                    action = random.randrange(0, 3, 1)
+                    action = random.randrange(3)
                 else:
-                    x_stack = x_sample[i:i + learning_sample_lines, :]
+                    x_stack = x_sample[i:i+learning_sample_lines, :]
                     x_stack = x_stack.reshape([1, learning_sample_lines, avgs])
                     x_stack = self._normalize(x_stack)
                     prediction = self.targetDQN.Predict(x_stack)
-                    action = np.argmax(prediction[0, 0])
-                reward = self.trading.Play(i, state, action)
+                    action = np.argmax(prediction[0,0])
+                reward = self.trading.Play(index + i + learning_sample_lines -1, state, action)
                 # In this game, the player cannot affect to environment
                 # It is not used to store state
                 q_stack[i, action] = reward
                 actions[i] = action
                 state = action
-            self.trading.Close(index + oneGameTime, state)
+            # close action
+            reward = self.trading.Play(index + oneGameTime + learning_sample_lines - 1, state, 1)
+            q_stack[oneGameTime - 1, state] += reward
 
             for i in range(oneGameTime - 2, -1):
                 reward_next = np.max(q_stack[i + 1])
@@ -174,21 +177,27 @@ class MACHINE:
             x_stack = []
             y_stack = []
             for i in range(minibatch):
-                index = random.randint(0, oneGameTime - 1)
-                x_stack.append(self._normalize(x_sample[index:index + learning_sample_lines, :]))
-                y_stack.append(q_stack[index])
+                train_index = random.randrange(oneGameTime)
+                x_stack.append(self._normalize(x_sample[train_index:train_index+learning_sample_lines, :]))
+                y_stack.append(q_stack[train_index])
             x_stack = np.array(x_stack)
             x_stack = x_stack.reshape([minibatch, learning_sample_lines, avgs])
             y_stack = np.array(y_stack)
             y_stack = y_stack.reshape([minibatch, 1, 3])
-            _, _, graph = self.mainDQN.Update(x_stack, y_stack)
+            _, _, graph, balance = self.mainDQN.Update(x_stack, y_stack, self.trading.GetBalance())
             step += 1
+            epsilon = epsilon * 0.9999
+            if epsilon < 1e-4:
+                epsilon = 0.2
+                print("epsilon is smaller than 1e-4")
 
             self.gui.SetTotal(self.count)
 
+            if self.count%20== 19:
+                self.targetDQN.Copy()
+
             if self.count == 200:
-                self.targetDQN.Copy(self.mainDQN)
-                self.mainDQN.StoreGraph(graph, step)
+                self.mainDQN.StoreGraph(graph, balance, step)
                 self.Reset()
                 self.trading.Reset(step)
                 self.Save()

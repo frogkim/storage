@@ -1,282 +1,232 @@
-Step : 200, Balance : 984.8908, DrawDown : 1.51, Long : 0.4976, Short : 0.4803
-Step : 400, Balance : 983.7773, DrawDown : 1.62, Long : 0.4785, Short : 0.4697
-Step : 600, Balance : 984.6277, DrawDown : 1.54, Long : 0.4903, Short : 0.4835
-Step : 800, Balance : 984.6476, DrawDown : 1.54, Long : 0.4719, Short : 0.4892
-Step : 1000, Balance : 983.9361, DrawDown : 1.61, Long : 0.4823, Short : 0.4896
-Step : 1200, Balance : 984.9401, DrawDown : 1.52, Long : 0.4760, Short : 0.4747
-Step : 1400, Balance : 983.6909, DrawDown : 1.64, Long : 0.4707, Short : 0.4729
-Step : 1600, Balance : 985.6398, DrawDown : 1.44, Long : 0.4889, Short : 0.4813
-Step : 1800, Balance : 983.3809, DrawDown : 1.67, Long : 0.4865, Short : 0.4912
-Step : 2000, Balance : 984.1322, DrawDown : 1.59, Long : 0.4892, Short : 0.4795
-Step : 2200, Balance : 984.8616, DrawDown : 1.52, Long : 0.5004, Short : 0.5028
-Step : 2400, Balance : 982.8872, DrawDown : 1.71, Long : 0.4608, Short : 0.4763
-Step : 2600, Balance : 983.9016, DrawDown : 1.61, Long : 0.4568, Short : 0.4899
-Step : 2800, Balance : 984.0566, DrawDown : 1.60, Long : 0.4924, Short : 0.4870
-Step : 3000, Balance : 983.3410, DrawDown : 1.67, Long : 0.4730, Short : 0.4737
-Step : 3200, Balance : 984.4165, DrawDown : 1.56, Long : 0.5011, Short : 0.4791
-Step : 3400, Balance : 985.4894, DrawDown : 1.45, Long : 0.4691, Short : 0.4840
-Step : 3600, Balance : 984.8721, DrawDown : 1.52, Long : 0.5128, Short : 0.4687
-Step : 3800, Balance : 983.3066, DrawDown : 1.68, Long : 0.4785, Short : 0.4795
-Step : 4000, Balance : 985.6449, DrawDown : 1.44, Long : 0.4969, Short : 0.4836
-Step : 4200, Balance : 984.5157, DrawDown : 1.55, Long : 0.4897, Short : 0.4803
-Step : 4400, Balance : 985.0477, DrawDown : 1.50, Long : 0.4799, Short : 0.4974
-Step : 4600, Balance : 982.2877, DrawDown : 1.77, Long : 0.4961, Short : 0.4735
-Step : 4800, Balance : 984.8405, DrawDown : 1.52, Long : 0.4768, Short : 0.4780
-Step : 5000, Balance : 982.8096, DrawDown : 1.73, Long : 0.4625, Short : 0.4720
-Step : 5200, Balance : 984.1077, DrawDown : 1.59, Long : 0.4981, Short : 0.4791
-Step : 5400, Balance : 984.0042, DrawDown : 1.61, Long : 0.4887, Short : 0.4835
-Step : 5600, Balance : 985.1774, DrawDown : 1.49, Long : 0.4950, Short : 0.4903
-Step : 5800, Balance : 984.3912, DrawDown : 1.56, Long : 0.4758, Short : 0.4772
-Step : 6000, Balance : 984.4150, DrawDown : 1.56, Long : 0.4818, Short : 0.4663
-Step : 6200, Balance : 984.1535, DrawDown : 1.59, Long : 0.4639, Short : 0.4812
-Step : 6400, Balance : 985.1114, DrawDown : 1.49, Long : 0.4934, Short : 0.4910
-Step : 6600, Balance : 982.9752, DrawDown : 1.70, Long : 0.4761, Short : 0.4664
-Step : 6800, Balance : 985.2301, DrawDown : 1.50, Long : 0.4820, Short : 0.4857
-Step : 7000, Balance : 984.6229, DrawDown : 1.54, Long : 0.4674, Short : 0.4939
-Step : 7200, Balance : 982.6277, DrawDown : 1.74, Long : 0.4783, Short : 0.4684
-Step : 7400, Balance : 983.5321, DrawDown : 1.65, Long : 0.4901, Short : 0.4808
-Step : 7600, Balance : 984.5591, DrawDown : 1.55, Long : 0.5027, Short : 0.4744
-Step : 7800, Balance : 985.0651, DrawDown : 1.50, Long : 0.5044, Short : 0.4866
-Step : 8000, Balance : 984.4526, DrawDown : 1.56, Long : 0.4927, Short : 0.4879
-Step : 8200, Balance : 983.9958, DrawDown : 1.61, Long : 0.4996, Short : 0.4871
-Step : 8400, Balance : 983.8144, DrawDown : 1.62, Long : 0.4716, Short : 0.4709
-Step : 8600, Balance : 983.9408, DrawDown : 1.61, Long : 0.4580, Short : 0.4792
-Step : 8800, Balance : 983.9319, DrawDown : 1.61, Long : 0.4620, Short : 0.4889
-Step : 9000, Balance : 984.5916, DrawDown : 1.55, Long : 0.4675, Short : 0.4767
-Step : 9200, Balance : 984.6022, DrawDown : 1.54, Long : 0.4898, Short : 0.4829
-Step : 9400, Balance : 982.8426, DrawDown : 1.72, Long : 0.4695, Short : 0.4725
-Step : 9600, Balance : 986.0876, DrawDown : 1.40, Long : 0.4901, Short : 0.4881
-Step : 9800, Balance : 986.4242, DrawDown : 1.37, Long : 0.4984, Short : 0.5000
-Step : 10000, Balance : 985.0107, DrawDown : 1.50, Long : 0.4679, Short : 0.4732
-Step : 10200, Balance : 983.0970, DrawDown : 1.71, Long : 0.4568, Short : 0.4850
-Step : 10400, Balance : 983.7693, DrawDown : 1.62, Long : 0.4913, Short : 0.4680
-Step : 10600, Balance : 985.2910, DrawDown : 1.48, Long : 0.4780, Short : 0.4931
-Step : 10800, Balance : 985.4507, DrawDown : 1.45, Long : 0.4942, Short : 0.4996
-Step : 11000, Balance : 983.0632, DrawDown : 1.69, Long : 0.4957, Short : 0.4684
-Step : 11200, Balance : 985.7232, DrawDown : 1.43, Long : 0.5158, Short : 0.4704
-Step : 11400, Balance : 984.5635, DrawDown : 1.55, Long : 0.4694, Short : 0.4708
-Step : 11600, Balance : 984.2313, DrawDown : 1.58, Long : 0.4863, Short : 0.4835
-Step : 11800, Balance : 984.7748, DrawDown : 1.52, Long : 0.4720, Short : 0.4871
-Step : 12000, Balance : 985.1391, DrawDown : 1.49, Long : 0.4820, Short : 0.4881
-Step : 12200, Balance : 984.0550, DrawDown : 1.60, Long : 0.4807, Short : 0.4816
-Step : 12400, Balance : 984.0127, DrawDown : 1.60, Long : 0.4605, Short : 0.4952
-Step : 12600, Balance : 986.9899, DrawDown : 1.30, Long : 0.4647, Short : 0.4862
-Step : 12800, Balance : 985.5136, DrawDown : 1.45, Long : 0.4884, Short : 0.4870
-Step : 13000, Balance : 985.7804, DrawDown : 1.43, Long : 0.4819, Short : 0.4930
-Step : 13200, Balance : 984.9411, DrawDown : 1.51, Long : 0.4817, Short : 0.4855
-Step : 13400, Balance : 984.9027, DrawDown : 1.52, Long : 0.4804, Short : 0.4802
-Step : 13600, Balance : 982.5675, DrawDown : 1.75, Long : 0.4736, Short : 0.4574
-Step : 13800, Balance : 985.2541, DrawDown : 1.48, Long : 0.4903, Short : 0.4883
-Step : 14000, Balance : 983.3890, DrawDown : 1.67, Long : 0.4605, Short : 0.4658
-Step : 14200, Balance : 984.3004, DrawDown : 1.58, Long : 0.4723, Short : 0.4904
-Step : 14400, Balance : 984.1738, DrawDown : 1.59, Long : 0.4771, Short : 0.4814
-Step : 14600, Balance : 983.2236, DrawDown : 1.68, Long : 0.4739, Short : 0.4816
-Step : 14800, Balance : 983.6790, DrawDown : 1.63, Long : 0.4587, Short : 0.4795
-Step : 15000, Balance : 984.3972, DrawDown : 1.56, Long : 0.4817, Short : 0.4792
-Step : 15200, Balance : 984.1979, DrawDown : 1.58, Long : 0.4793, Short : 0.4789
-Step : 15400, Balance : 986.1242, DrawDown : 1.39, Long : 0.4863, Short : 0.4915
-Step : 15600, Balance : 984.7259, DrawDown : 1.53, Long : 0.4640, Short : 0.4786
-Step : 15800, Balance : 984.9866, DrawDown : 1.51, Long : 0.4787, Short : 0.4683
-Step : 16000, Balance : 984.8753, DrawDown : 1.52, Long : 0.4741, Short : 0.4883
-Step : 16200, Balance : 985.5098, DrawDown : 1.45, Long : 0.5028, Short : 0.4917
-Step : 16400, Balance : 985.4227, DrawDown : 1.47, Long : 0.4977, Short : 0.4962
-Step : 16600, Balance : 984.5969, DrawDown : 1.54, Long : 0.5008, Short : 0.4776
-Step : 16800, Balance : 983.6749, DrawDown : 1.63, Long : 0.4669, Short : 0.4686
-Step : 17000, Balance : 985.1000, DrawDown : 1.49, Long : 0.4712, Short : 0.4844
-Step : 17200, Balance : 986.6801, DrawDown : 1.33, Long : 0.4927, Short : 0.4802
-Step : 17400, Balance : 983.9398, DrawDown : 1.61, Long : 0.4673, Short : 0.4872
-Step : 17600, Balance : 984.2328, DrawDown : 1.58, Long : 0.4939, Short : 0.4764
-Step : 17800, Balance : 983.4709, DrawDown : 1.66, Long : 0.4643, Short : 0.4759
-Step : 18000, Balance : 985.3287, DrawDown : 1.47, Long : 0.4878, Short : 0.4850
-Step : 18200, Balance : 983.4538, DrawDown : 1.67, Long : 0.4753, Short : 0.4779
-Step : 18400, Balance : 983.9473, DrawDown : 1.61, Long : 0.4863, Short : 0.4737
-Step : 18600, Balance : 985.8888, DrawDown : 1.42, Long : 0.4989, Short : 0.4860
-Step : 18800, Balance : 984.6324, DrawDown : 1.54, Long : 0.4753, Short : 0.4927
-Step : 19000, Balance : 985.1527, DrawDown : 1.50, Long : 0.4837, Short : 0.4814
-Step : 19200, Balance : 983.2292, DrawDown : 1.68, Long : 0.4855, Short : 0.4720
-Step : 19400, Balance : 986.1341, DrawDown : 1.39, Long : 0.4823, Short : 0.4831
-Step : 19600, Balance : 983.1929, DrawDown : 1.68, Long : 0.4683, Short : 0.4888
-Step : 19800, Balance : 983.4087, DrawDown : 1.66, Long : 0.4533, Short : 0.4733
-Step : 20000, Balance : 983.4323, DrawDown : 1.66, Long : 0.4554, Short : 0.4633
-Step : 20200, Balance : 983.2236, DrawDown : 1.68, Long : 0.4642, Short : 0.4704
-Step : 20400, Balance : 983.8928, DrawDown : 1.61, Long : 0.4945, Short : 0.4761
-Step : 20600, Balance : 986.2198, DrawDown : 1.38, Long : 0.5012, Short : 0.4934
-Step : 20800, Balance : 984.1755, DrawDown : 1.58, Long : 0.4562, Short : 0.4708
-Step : 21000, Balance : 984.4025, DrawDown : 1.56, Long : 0.4754, Short : 0.4674
-Step : 21200, Balance : 985.0575, DrawDown : 1.50, Long : 0.4961, Short : 0.4777
-Step : 21400, Balance : 984.0456, DrawDown : 1.60, Long : 0.4617, Short : 0.4864
-Step : 21600, Balance : 983.8617, DrawDown : 1.62, Long : 0.4638, Short : 0.4749
-Step : 21800, Balance : 982.3069, DrawDown : 1.77, Long : 0.4580, Short : 0.4828
-Step : 22000, Balance : 983.7890, DrawDown : 1.62, Long : 0.4684, Short : 0.4730
-Step : 22200, Balance : 984.6273, DrawDown : 1.54, Long : 0.4651, Short : 0.4799
-Step : 22400, Balance : 985.0634, DrawDown : 1.50, Long : 0.4873, Short : 0.4878
-Step : 22600, Balance : 983.7975, DrawDown : 1.62, Long : 0.4968, Short : 0.4835
-Step : 22800, Balance : 983.2231, DrawDown : 1.68, Long : 0.4703, Short : 0.4777
-Step : 23000, Balance : 984.5590, DrawDown : 1.55, Long : 0.4917, Short : 0.4821
-Step : 23200, Balance : 984.2391, DrawDown : 1.58, Long : 0.4876, Short : 0.4811
-Step : 23400, Balance : 983.1611, DrawDown : 1.69, Long : 0.4543, Short : 0.4781
-Step : 23600, Balance : 984.8136, DrawDown : 1.52, Long : 0.4950, Short : 0.4930
-Step : 23800, Balance : 984.2087, DrawDown : 1.58, Long : 0.4711, Short : 0.4655
-Step : 24000, Balance : 984.8209, DrawDown : 1.52, Long : 0.4699, Short : 0.4686
-Step : 24200, Balance : 984.2823, DrawDown : 1.57, Long : 0.4789, Short : 0.4885
-Step : 24400, Balance : 983.6474, DrawDown : 1.64, Long : 0.4735, Short : 0.4802
-Step : 24600, Balance : 984.4977, DrawDown : 1.55, Long : 0.4958, Short : 0.4695
-Step : 24800, Balance : 982.8251, DrawDown : 1.72, Long : 0.4650, Short : 0.4805
-Step : 25000, Balance : 985.3428, DrawDown : 1.47, Long : 0.4815, Short : 0.4892
-Step : 25200, Balance : 984.0903, DrawDown : 1.59, Long : 0.4953, Short : 0.4773
-Step : 25400, Balance : 984.5800, DrawDown : 1.55, Long : 0.4784, Short : 0.4941
-Step : 25600, Balance : 984.2138, DrawDown : 1.58, Long : 0.4760, Short : 0.4810
-Step : 25800, Balance : 984.6256, DrawDown : 1.54, Long : 0.4791, Short : 0.4865
-Step : 26000, Balance : 984.3023, DrawDown : 1.57, Long : 0.4930, Short : 0.4598
-Step : 26200, Balance : 985.4608, DrawDown : 1.45, Long : 0.4798, Short : 0.4810
-Step : 26400, Balance : 985.0362, DrawDown : 1.51, Long : 0.4974, Short : 0.4942
-Step : 26600, Balance : 984.5148, DrawDown : 1.55, Long : 0.4805, Short : 0.4753
-Step : 26800, Balance : 984.3374, DrawDown : 1.57, Long : 0.4859, Short : 0.4805
-Step : 27000, Balance : 983.2673, DrawDown : 1.68, Long : 0.4884, Short : 0.4822
-Step : 27200, Balance : 985.4561, DrawDown : 1.46, Long : 0.4953, Short : 0.5028
-Step : 27400, Balance : 984.7641, DrawDown : 1.54, Long : 0.4980, Short : 0.4798
-Step : 27600, Balance : 984.6858, DrawDown : 1.53, Long : 0.4656, Short : 0.4782
-Step : 27800, Balance : 985.4851, DrawDown : 1.45, Long : 0.5149, Short : 0.4873
-Step : 28000, Balance : 983.7178, DrawDown : 1.63, Long : 0.4788, Short : 0.4762
-Step : 28200, Balance : 983.1211, DrawDown : 1.70, Long : 0.4774, Short : 0.4715
-Step : 28400, Balance : 983.4807, DrawDown : 1.65, Long : 0.4936, Short : 0.4762
-Step : 28600, Balance : 984.7242, DrawDown : 1.54, Long : 0.4742, Short : 0.4884
-Step : 28800, Balance : 983.6387, DrawDown : 1.64, Long : 0.4613, Short : 0.4864
-Step : 29000, Balance : 984.1627, DrawDown : 1.58, Long : 0.4827, Short : 0.4682
-Step : 29200, Balance : 984.1444, DrawDown : 1.59, Long : 0.4760, Short : 0.4828
-Step : 29400, Balance : 983.8797, DrawDown : 1.62, Long : 0.4939, Short : 0.4731
-Step : 29600, Balance : 984.6995, DrawDown : 1.53, Long : 0.4711, Short : 0.4840
-Step : 29800, Balance : 985.1892, DrawDown : 1.48, Long : 0.4647, Short : 0.4822
-Step : 30000, Balance : 983.6061, DrawDown : 1.64, Long : 0.4984, Short : 0.4818
-Step : 30200, Balance : 983.8532, DrawDown : 1.62, Long : 0.4790, Short : 0.4676
-Step : 30400, Balance : 984.2238, DrawDown : 1.58, Long : 0.4833, Short : 0.4666
-Step : 30600, Balance : 984.7179, DrawDown : 1.54, Long : 0.4809, Short : 0.4884
-Step : 30800, Balance : 984.9643, DrawDown : 1.51, Long : 0.4853, Short : 0.4861
-Step : 31000, Balance : 984.4439, DrawDown : 1.56, Long : 0.4710, Short : 0.4733
-Step : 31200, Balance : 982.2811, DrawDown : 1.78, Long : 0.4612, Short : 0.4743
-Step : 31400, Balance : 984.1124, DrawDown : 1.59, Long : 0.4838, Short : 0.4766
-Step : 31600, Balance : 986.0131, DrawDown : 1.40, Long : 0.4988, Short : 0.4794
-Step : 31800, Balance : 984.4898, DrawDown : 1.55, Long : 0.4926, Short : 0.4860
-Step : 32000, Balance : 985.8003, DrawDown : 1.42, Long : 0.5020, Short : 0.4833
-Step : 32200, Balance : 986.4684, DrawDown : 1.36, Long : 0.4757, Short : 0.4808
-Step : 32400, Balance : 985.7118, DrawDown : 1.43, Long : 0.4836, Short : 0.4976
-Step : 32600, Balance : 985.6133, DrawDown : 1.44, Long : 0.4968, Short : 0.5004
-Step : 32800, Balance : 983.4404, DrawDown : 1.66, Long : 0.4791, Short : 0.4731
-Step : 33000, Balance : 985.7415, DrawDown : 1.43, Long : 0.4896, Short : 0.4972
-Step : 33200, Balance : 985.1940, DrawDown : 1.50, Long : 0.4771, Short : 0.4831
-Step : 33400, Balance : 983.5179, DrawDown : 1.65, Long : 0.4852, Short : 0.4683
-Step : 33600, Balance : 984.9362, DrawDown : 1.51, Long : 0.4875, Short : 0.4860
-Step : 33800, Balance : 984.7289, DrawDown : 1.53, Long : 0.4880, Short : 0.4946
-Step : 34000, Balance : 984.8313, DrawDown : 1.52, Long : 0.4968, Short : 0.4801
-Step : 34200, Balance : 984.2030, DrawDown : 1.58, Long : 0.4786, Short : 0.4968
-Step : 34400, Balance : 983.9141, DrawDown : 1.61, Long : 0.4784, Short : 0.4822
-Step : 34600, Balance : 984.1455, DrawDown : 1.59, Long : 0.4888, Short : 0.4816
-Step : 34800, Balance : 983.3354, DrawDown : 1.67, Long : 0.4857, Short : 0.4731
-Step : 35000, Balance : 983.3945, DrawDown : 1.66, Long : 0.4877, Short : 0.4782
-Step : 35200, Balance : 985.0030, DrawDown : 1.50, Long : 0.4976, Short : 0.4788
-Step : 35400, Balance : 984.8210, DrawDown : 1.52, Long : 0.4703, Short : 0.5000
-Step : 35600, Balance : 985.8798, DrawDown : 1.41, Long : 0.4823, Short : 0.4894
-Step : 35800, Balance : 984.2486, DrawDown : 1.59, Long : 0.4846, Short : 0.4757
-Step : 36000, Balance : 983.9768, DrawDown : 1.60, Long : 0.4705, Short : 0.4713
-Step : 36200, Balance : 985.1349, DrawDown : 1.49, Long : 0.5158, Short : 0.4731
-Step : 36400, Balance : 985.4423, DrawDown : 1.46, Long : 0.4622, Short : 0.4680
-Step : 36600, Balance : 984.3038, DrawDown : 1.57, Long : 0.4996, Short : 0.4805
-Step : 36800, Balance : 984.9177, DrawDown : 1.51, Long : 0.4813, Short : 0.4839
-Step : 37000, Balance : 982.7502, DrawDown : 1.73, Long : 0.4565, Short : 0.4809
-Step : 37200, Balance : 984.8185, DrawDown : 1.52, Long : 0.4827, Short : 0.4776
-Step : 37400, Balance : 984.9860, DrawDown : 1.50, Long : 0.5147, Short : 0.4810
-Step : 37600, Balance : 984.5964, DrawDown : 1.55, Long : 0.4762, Short : 0.4882
-Step : 37800, Balance : 986.8768, DrawDown : 1.32, Long : 0.5079, Short : 0.4869
-Step : 38000, Balance : 984.1161, DrawDown : 1.59, Long : 0.4680, Short : 0.4887
-Step : 38200, Balance : 984.5928, DrawDown : 1.55, Long : 0.4747, Short : 0.4768
-Step : 38400, Balance : 982.7936, DrawDown : 1.72, Long : 0.4727, Short : 0.4736
-Step : 38600, Balance : 984.5219, DrawDown : 1.55, Long : 0.4569, Short : 0.4723
-Step : 38800, Balance : 982.9536, DrawDown : 1.70, Long : 0.4742, Short : 0.4700
-Step : 39000, Balance : 985.2005, DrawDown : 1.49, Long : 0.4817, Short : 0.4824
-Step : 39200, Balance : 984.9112, DrawDown : 1.52, Long : 0.4771, Short : 0.4777
-Step : 39400, Balance : 984.6415, DrawDown : 1.54, Long : 0.4826, Short : 0.4868
-Step : 39600, Balance : 984.3042, DrawDown : 1.57, Long : 0.4902, Short : 0.4847
-Step : 39800, Balance : 983.8584, DrawDown : 1.62, Long : 0.5049, Short : 0.4625
-Step : 40000, Balance : 983.3123, DrawDown : 1.67, Long : 0.4619, Short : 0.4634
-Step : 40200, Balance : 986.0525, DrawDown : 1.40, Long : 0.4770, Short : 0.4819
-Step : 40400, Balance : 983.3950, DrawDown : 1.68, Long : 0.4715, Short : 0.4782
-Step : 40600, Balance : 985.0320, DrawDown : 1.50, Long : 0.5051, Short : 0.4876
-Step : 40800, Balance : 983.8469, DrawDown : 1.62, Long : 0.4527, Short : 0.4642
-Step : 41000, Balance : 985.1308, DrawDown : 1.49, Long : 0.4694, Short : 0.4922
-Step : 41200, Balance : 981.7227, DrawDown : 1.83, Long : 0.4531, Short : 0.4736
-Step : 41400, Balance : 983.6328, DrawDown : 1.64, Long : 0.4672, Short : 0.4815
-Step : 41600, Balance : 983.4375, DrawDown : 1.66, Long : 0.4878, Short : 0.4726
-Step : 41800, Balance : 983.3783, DrawDown : 1.67, Long : 0.4980, Short : 0.4810
-Step : 42000, Balance : 983.3308, DrawDown : 1.67, Long : 0.4707, Short : 0.4769
-Step : 42200, Balance : 986.0369, DrawDown : 1.40, Long : 0.4841, Short : 0.4984
-Step : 42400, Balance : 984.2087, DrawDown : 1.58, Long : 0.4796, Short : 0.4854
-Step : 42600, Balance : 984.3584, DrawDown : 1.58, Long : 0.4654, Short : 0.4824
-Step : 42800, Balance : 985.7574, DrawDown : 1.42, Long : 0.4961, Short : 0.4631
-Step : 43000, Balance : 984.6954, DrawDown : 1.53, Long : 0.4669, Short : 0.4920
-Step : 43200, Balance : 983.2762, DrawDown : 1.68, Long : 0.4726, Short : 0.4788
-Step : 43400, Balance : 983.7486, DrawDown : 1.63, Long : 0.4586, Short : 0.4829
-Step : 43600, Balance : 986.1021, DrawDown : 1.40, Long : 0.4984, Short : 0.4887
-Step : 43800, Balance : 983.6516, DrawDown : 1.64, Long : 0.4746, Short : 0.4757
-Step : 44000, Balance : 984.5417, DrawDown : 1.55, Long : 0.4784, Short : 0.4913
-Step : 44200, Balance : 984.3551, DrawDown : 1.57, Long : 0.4825, Short : 0.4795
-Step : 44400, Balance : 984.9190, DrawDown : 1.51, Long : 0.4842, Short : 0.4683
-Step : 44600, Balance : 984.6369, DrawDown : 1.54, Long : 0.4838, Short : 0.4769
-Step : 44800, Balance : 986.6642, DrawDown : 1.34, Long : 0.5128, Short : 0.4905
-Step : 45000, Balance : 985.7916, DrawDown : 1.44, Long : 0.4780, Short : 0.4818
-Step : 45200, Balance : 983.6186, DrawDown : 1.64, Long : 0.4694, Short : 0.4759
-Step : 45400, Balance : 984.7249, DrawDown : 1.53, Long : 0.4951, Short : 0.4798
-Step : 45600, Balance : 983.0815, DrawDown : 1.69, Long : 0.4790, Short : 0.4715
-Step : 45800, Balance : 986.3678, DrawDown : 1.38, Long : 0.5008, Short : 0.4767
-Step : 46000, Balance : 984.4661, DrawDown : 1.56, Long : 0.4789, Short : 0.4741
-Step : 46200, Balance : 986.4220, DrawDown : 1.36, Long : 0.4887, Short : 0.4907
-Step : 46400, Balance : 985.0948, DrawDown : 1.49, Long : 0.4709, Short : 0.4926
-Step : 46600, Balance : 985.0618, DrawDown : 1.50, Long : 0.4790, Short : 0.4822
-Step : 46800, Balance : 983.1927, DrawDown : 1.69, Long : 0.4752, Short : 0.4750
-Step : 47000, Balance : 984.6652, DrawDown : 1.54, Long : 0.4844, Short : 0.4690
-Step : 47200, Balance : 984.1557, DrawDown : 1.58, Long : 0.4737, Short : 0.4531
-Step : 47400, Balance : 983.8918, DrawDown : 1.62, Long : 0.4824, Short : 0.4665
-Step : 47600, Balance : 984.2765, DrawDown : 1.57, Long : 0.4762, Short : 0.4906
-Step : 47800, Balance : 984.8812, DrawDown : 1.52, Long : 0.4733, Short : 0.4962
-Step : 48000, Balance : 984.3880, DrawDown : 1.57, Long : 0.4529, Short : 0.4748
-Step : 48200, Balance : 984.8096, DrawDown : 1.52, Long : 0.4824, Short : 0.4793
-Step : 48400, Balance : 983.5603, DrawDown : 1.64, Long : 0.4719, Short : 0.4844
-Step : 48600, Balance : 984.4891, DrawDown : 1.55, Long : 0.4795, Short : 0.4819
-Step : 48800, Balance : 983.2757, DrawDown : 1.69, Long : 0.4781, Short : 0.4592
-Step : 49000, Balance : 984.0649, DrawDown : 1.59, Long : 0.4747, Short : 0.4835
-Step : 49200, Balance : 985.3345, DrawDown : 1.47, Long : 0.4776, Short : 0.4748
-Step : 49400, Balance : 985.4661, DrawDown : 1.45, Long : 0.4809, Short : 0.4902
-Step : 49600, Balance : 982.8355, DrawDown : 1.72, Long : 0.4764, Short : 0.4771
-Step : 49800, Balance : 984.2554, DrawDown : 1.58, Long : 0.4787, Short : 0.4733
-Step : 50000, Balance : 985.4794, DrawDown : 1.46, Long : 0.4926, Short : 0.4722
-Step : 50200, Balance : 986.4325, DrawDown : 1.36, Long : 0.4958, Short : 0.4859
-Step : 50400, Balance : 984.4897, DrawDown : 1.55, Long : 0.4784, Short : 0.4938
-Step : 50600, Balance : 983.1521, DrawDown : 1.69, Long : 0.4837, Short : 0.4678
-Step : 50800, Balance : 985.0011, DrawDown : 1.50, Long : 0.4757, Short : 0.4854
-Step : 51000, Balance : 984.6498, DrawDown : 1.55, Long : 0.4667, Short : 0.4649
-Step : 51200, Balance : 983.6305, DrawDown : 1.64, Long : 0.4571, Short : 0.4803
-Step : 51400, Balance : 984.6744, DrawDown : 1.54, Long : 0.4682, Short : 0.4779
-Step : 51600, Balance : 985.1031, DrawDown : 1.50, Long : 0.5092, Short : 0.4826
-Step : 51800, Balance : 984.7587, DrawDown : 1.52, Long : 0.4860, Short : 0.4870
-Step : 52000, Balance : 985.7357, DrawDown : 1.44, Long : 0.4767, Short : 0.5030
-Step : 52200, Balance : 982.6542, DrawDown : 1.74, Long : 0.4883, Short : 0.4639
-Step : 52400, Balance : 984.9721, DrawDown : 1.51, Long : 0.4932, Short : 0.4879
-Step : 52600, Balance : 984.4077, DrawDown : 1.56, Long : 0.4674, Short : 0.4917
-Step : 52800, Balance : 985.1642, DrawDown : 1.49, Long : 0.4867, Short : 0.4900
-Step : 53000, Balance : 983.3123, DrawDown : 1.67, Long : 0.4702, Short : 0.4793
-Step : 53200, Balance : 984.5296, DrawDown : 1.55, Long : 0.4705, Short : 0.4764
-Step : 53400, Balance : 983.9225, DrawDown : 1.61, Long : 0.4829, Short : 0.4663
-Step : 53600, Balance : 983.3995, DrawDown : 1.66, Long : 0.4684, Short : 0.4807
-Step : 53800, Balance : 985.0012, DrawDown : 1.50, Long : 0.4829, Short : 0.4855
-Step : 54000, Balance : 983.3636, DrawDown : 1.66, Long : 0.4787, Short : 0.4824
-Step : 54200, Balance : 983.5084, DrawDown : 1.65, Long : 0.4661, Short : 0.4743
-Step : 54400, Balance : 983.0353, DrawDown : 1.70, Long : 0.4862, Short : 0.4747
-Step : 54600, Balance : 985.0997, DrawDown : 1.49, Long : 0.4659, Short : 0.4883
-Step : 54800, Balance : 983.0656, DrawDown : 1.70, Long : 0.5019, Short : 0.4730
-Step : 55000, Balance : 984.1304, DrawDown : 1.60, Long : 0.4810, Short : 0.4708
-Step : 55200, Balance : 984.4076, DrawDown : 1.56, Long : 0.4837, Short : 0.4811
-Step : 55400, Balance : 984.4269, DrawDown : 1.56, Long : 0.4851, Short : 0.4760
-Step : 200, Balance : 984.4559, DrawDown : 1.56, Long : 0.4729, Short : 0.4726
-Step : 200, Balance : 983.8290, DrawDown : 1.62, Long : 0.4610, Short : 0.4920
-Step : 400, Balance : 983.6773, DrawDown : 1.64, Long : 0.4578, Short : 0.4761
-Step : 600, Balance : 984.3057, DrawDown : 1.58, Long : 0.4735, Short : 0.4751
-Step : 800, Balance : 984.4618, DrawDown : 1.57, Long : 0.4761, Short : 0.4769
+Step : 200, Balance : 582.0280, DrawDown : 0.42, Long : 1198, Short : 2386, LongRatio : 0.5134, ShortRatio : 0.4740
+Step : 400, Balance : 570.7940, DrawDown : 0.43, Long : 1205, Short : 2395, LongRatio : 0.4788, ShortRatio : 0.4889
+Step : 600, Balance : 555.5480, DrawDown : 0.44, Long : 1262, Short : 2433, LongRatio : 0.4889, ShortRatio : 0.4928
+Step : 800, Balance : 583.7550, DrawDown : 0.42, Long : 1155, Short : 2388, LongRatio : 0.5022, ShortRatio : 0.4908
+Step : 200, Balance : 567.1590, DrawDown : 0.43, Long : 1286, Short : 2520, LongRatio : 0.5132, ShortRatio : 0.5131
+Step : 200, Balance : 568.6880, DrawDown : 0.43, Long : 1264, Short : 2458, LongRatio : 0.4763, ShortRatio : 0.4923
+Step : 400, Balance : 568.2300, DrawDown : 0.43, Long : 1179, Short : 2411, LongRatio : 0.5115, ShortRatio : 0.4782
+Step : 600, Balance : 551.4810, DrawDown : 0.45, Long : 1245, Short : 2409, LongRatio : 0.4691, ShortRatio : 0.4898
+Step : 800, Balance : 590.8150, DrawDown : 0.41, Long : 1155, Short : 2359, LongRatio : 0.5056, ShortRatio : 0.5011
+Step : 1000, Balance : 593.5130, DrawDown : 0.41, Long : 1168, Short : 2309, LongRatio : 0.4957, ShortRatio : 0.5024
+Step : 1200, Balance : 584.2310, DrawDown : 0.42, Long : 1216, Short : 2371, LongRatio : 0.5074, ShortRatio : 0.5002
+Step : 1400, Balance : 585.8550, DrawDown : 0.41, Long : 1097, Short : 2236, LongRatio : 0.4877, ShortRatio : 0.4861
+Step : 1600, Balance : 596.5870, DrawDown : 0.40, Long : 1040, Short : 2178, LongRatio : 0.4769, ShortRatio : 0.4789
+Step : 1800, Balance : 591.9630, DrawDown : 0.41, Long : 1066, Short : 2220, LongRatio : 0.5047, ShortRatio : 0.4820
+Step : 2000, Balance : 588.7050, DrawDown : 0.41, Long : 1091, Short : 2177, LongRatio : 0.4950, ShortRatio : 0.4892
+Step : 2200, Balance : 637.3710, DrawDown : 0.36, Long : 1046, Short : 2080, LongRatio : 0.5067, ShortRatio : 0.5087
+Step : 2400, Balance : 618.6840, DrawDown : 0.38, Long : 1057, Short : 2130, LongRatio : 0.4853, ShortRatio : 0.4850
+Step : 2600, Balance : 616.8020, DrawDown : 0.38, Long : 1058, Short : 2083, LongRatio : 0.4934, ShortRatio : 0.4983
+Step : 2800, Balance : 633.6510, DrawDown : 0.37, Long : 975, Short : 1987, LongRatio : 0.4831, ShortRatio : 0.5003
+Step : 3000, Balance : 647.4850, DrawDown : 0.35, Long : 969, Short : 1985, LongRatio : 0.5057, ShortRatio : 0.4992
+Step : 3200, Balance : 624.5380, DrawDown : 0.38, Long : 955, Short : 2009, LongRatio : 0.4984, ShortRatio : 0.4828
+Step : 3400, Balance : 652.9160, DrawDown : 0.35, Long : 914, Short : 1925, LongRatio : 0.4880, ShortRatio : 0.4940
+Step : 3600, Balance : 678.4690, DrawDown : 0.32, Long : 871, Short : 1817, LongRatio : 0.5316, ShortRatio : 0.5014
+Step : 3800, Balance : 642.0180, DrawDown : 0.36, Long : 905, Short : 1861, LongRatio : 0.4862, ShortRatio : 0.4761
+Step : 4000, Balance : 654.4600, DrawDown : 0.35, Long : 874, Short : 1799, LongRatio : 0.5011, ShortRatio : 0.4803
+Step : 4200, Balance : 667.5110, DrawDown : 0.33, Long : 824, Short : 1779, LongRatio : 0.5133, ShortRatio : 0.4918
+Step : 4400, Balance : 670.3890, DrawDown : 0.33, Long : 845, Short : 1795, LongRatio : 0.4959, ShortRatio : 0.5003
+Step : 4600, Balance : 675.1520, DrawDown : 0.32, Long : 825, Short : 1785, LongRatio : 0.5079, ShortRatio : 0.4863
+Step : 4800, Balance : 671.5570, DrawDown : 0.33, Long : 846, Short : 1716, LongRatio : 0.4752, ShortRatio : 0.4674
+Step : 5000, Balance : 693.7260, DrawDown : 0.31, Long : 791, Short : 1702, LongRatio : 0.4880, ShortRatio : 0.5217
+Step : 5200, Balance : 684.3810, DrawDown : 0.32, Long : 787, Short : 1673, LongRatio : 0.5133, ShortRatio : 0.5075
+Step : 5400, Balance : 683.5330, DrawDown : 0.32, Long : 735, Short : 1602, LongRatio : 0.4680, ShortRatio : 0.4900
+Step : 5600, Balance : 686.0060, DrawDown : 0.31, Long : 775, Short : 1641, LongRatio : 0.5239, ShortRatio : 0.4839
+Step : 5800, Balance : 678.8610, DrawDown : 0.32, Long : 749, Short : 1605, LongRatio : 0.5047, ShortRatio : 0.4498
+Step : 6000, Balance : 696.1510, DrawDown : 0.30, Long : 734, Short : 1607, LongRatio : 0.5027, ShortRatio : 0.4916
+Step : 6200, Balance : 703.7310, DrawDown : 0.30, Long : 690, Short : 1542, LongRatio : 0.4812, ShortRatio : 0.4851
+Step : 6400, Balance : 700.9300, DrawDown : 0.30, Long : 677, Short : 1481, LongRatio : 0.5037, ShortRatio : 0.4794
+Step : 6600, Balance : 704.6000, DrawDown : 0.30, Long : 687, Short : 1473, LongRatio : 0.4891, ShortRatio : 0.4779
+Step : 6800, Balance : 708.5510, DrawDown : 0.29, Long : 697, Short : 1466, LongRatio : 0.5050, ShortRatio : 0.4870
+Step : 7000, Balance : 716.7330, DrawDown : 0.28, Long : 683, Short : 1463, LongRatio : 0.5344, ShortRatio : 0.4839
+Step : 7200, Balance : 711.0320, DrawDown : 0.29, Long : 672, Short : 1422, LongRatio : 0.4702, ShortRatio : 0.5134
+Step : 7400, Balance : 720.9220, DrawDown : 0.28, Long : 633, Short : 1366, LongRatio : 0.4787, ShortRatio : 0.4876
+Step : 7600, Balance : 717.7900, DrawDown : 0.28, Long : 623, Short : 1372, LongRatio : 0.4928, ShortRatio : 0.4854
+Step : 7800, Balance : 739.0120, DrawDown : 0.26, Long : 578, Short : 1320, LongRatio : 0.5069, ShortRatio : 0.4871
+Step : 8000, Balance : 730.6050, DrawDown : 0.27, Long : 616, Short : 1336, LongRatio : 0.4675, ShortRatio : 0.4963
+Step : 8200, Balance : 727.4430, DrawDown : 0.27, Long : 608, Short : 1313, LongRatio : 0.5132, ShortRatio : 0.4806
+Step : 8400, Balance : 738.3740, DrawDown : 0.26, Long : 586, Short : 1294, LongRatio : 0.4949, ShortRatio : 0.5062
+Step : 8600, Balance : 737.6270, DrawDown : 0.26, Long : 532, Short : 1272, LongRatio : 0.5056, ShortRatio : 0.4945
+Step : 8800, Balance : 740.6240, DrawDown : 0.26, Long : 565, Short : 1297, LongRatio : 0.4761, ShortRatio : 0.5173
+Step : 9000, Balance : 742.1390, DrawDown : 0.26, Long : 528, Short : 1198, LongRatio : 0.5208, ShortRatio : 0.4699
+Step : 9200, Balance : 741.8880, DrawDown : 0.26, Long : 536, Short : 1187, LongRatio : 0.4869, ShortRatio : 0.4709
+Step : 9400, Balance : 754.8800, DrawDown : 0.25, Long : 542, Short : 1243, LongRatio : 0.5092, ShortRatio : 0.4916
+Step : 9600, Balance : 757.0090, DrawDown : 0.24, Long : 494, Short : 1162, LongRatio : 0.5223, ShortRatio : 0.5009
+Step : 9800, Balance : 760.5220, DrawDown : 0.24, Long : 506, Short : 1162, LongRatio : 0.5435, ShortRatio : 0.4983
+Step : 10000, Balance : 748.3510, DrawDown : 0.25, Long : 501, Short : 1175, LongRatio : 0.4711, ShortRatio : 0.4928
+Step : 10200, Balance : 765.8390, DrawDown : 0.23, Long : 466, Short : 1118, LongRatio : 0.5300, ShortRatio : 0.4902
+Step : 10400, Balance : 769.7620, DrawDown : 0.23, Long : 463, Short : 1116, LongRatio : 0.5140, ShortRatio : 0.5108
+Step : 10600, Balance : 757.6190, DrawDown : 0.24, Long : 434, Short : 1069, LongRatio : 0.4677, ShortRatio : 0.4967
+Step : 10800, Balance : 775.4850, DrawDown : 0.22, Long : 439, Short : 1048, LongRatio : 0.5558, ShortRatio : 0.5038
+Step : 11000, Balance : 764.6030, DrawDown : 0.24, Long : 444, Short : 1019, LongRatio : 0.4707, ShortRatio : 0.4887
+Step : 11200, Balance : 784.0210, DrawDown : 0.22, Long : 433, Short : 1017, LongRatio : 0.5127, ShortRatio : 0.4936
+Step : 11400, Balance : 775.4000, DrawDown : 0.22, Long : 424, Short : 994, LongRatio : 0.4811, ShortRatio : 0.4990
+Step : 11600, Balance : 773.8410, DrawDown : 0.23, Long : 468, Short : 1033, LongRatio : 0.5043, ShortRatio : 0.4956
+Step : 11800, Balance : 775.1200, DrawDown : 0.22, Long : 457, Short : 1037, LongRatio : 0.4989, ShortRatio : 0.5063
+Step : 12000, Balance : 782.9290, DrawDown : 0.22, Long : 426, Short : 961, LongRatio : 0.4718, ShortRatio : 0.5099
+Step : 12200, Balance : 783.3670, DrawDown : 0.22, Long : 369, Short : 927, LongRatio : 0.4553, ShortRatio : 0.5210
+Step : 12400, Balance : 802.9030, DrawDown : 0.20, Long : 343, Short : 893, LongRatio : 0.5131, ShortRatio : 0.4815
+Step : 12600, Balance : 781.9310, DrawDown : 0.22, Long : 381, Short : 941, LongRatio : 0.4619, ShortRatio : 0.4984
+Step : 12800, Balance : 786.6410, DrawDown : 0.21, Long : 377, Short : 909, LongRatio : 0.5438, ShortRatio : 0.4642
+Step : 13000, Balance : 778.0070, DrawDown : 0.22, Long : 397, Short : 947, LongRatio : 0.5038, ShortRatio : 0.4710
+Step : 13200, Balance : 810.7310, DrawDown : 0.19, Long : 315, Short : 845, LongRatio : 0.5175, ShortRatio : 0.5112
+Step : 13400, Balance : 787.1720, DrawDown : 0.21, Long : 380, Short : 946, LongRatio : 0.5000, ShortRatio : 0.4989
+Step : 13600, Balance : 786.5040, DrawDown : 0.21, Long : 369, Short : 879, LongRatio : 0.5176, ShortRatio : 0.4915
+Step : 13800, Balance : 796.9400, DrawDown : 0.20, Long : 319, Short : 818, LongRatio : 0.5423, ShortRatio : 0.4658
+Step : 14000, Balance : 803.8090, DrawDown : 0.20, Long : 311, Short : 831, LongRatio : 0.5080, ShortRatio : 0.4838
+Step : 14200, Balance : 792.5250, DrawDown : 0.21, Long : 345, Short : 837, LongRatio : 0.4928, ShortRatio : 0.4898
+Step : 14400, Balance : 807.1300, DrawDown : 0.19, Long : 339, Short : 823, LongRatio : 0.5162, ShortRatio : 0.4957
+Step : 14600, Balance : 803.3040, DrawDown : 0.20, Long : 324, Short : 822, LongRatio : 0.4691, ShortRatio : 0.5036
+Step : 14800, Balance : 797.0600, DrawDown : 0.20, Long : 319, Short : 817, LongRatio : 0.4577, ShortRatio : 0.4957
+Step : 15000, Balance : 815.7910, DrawDown : 0.18, Long : 273, Short : 739, LongRatio : 0.4652, ShortRatio : 0.4723
+Step : 15200, Balance : 808.6930, DrawDown : 0.19, Long : 289, Short : 748, LongRatio : 0.5225, ShortRatio : 0.4773
+Step : 15400, Balance : 813.0990, DrawDown : 0.19, Long : 289, Short : 732, LongRatio : 0.5017, ShortRatio : 0.4877
+Step : 15600, Balance : 796.4700, DrawDown : 0.20, Long : 291, Short : 766, LongRatio : 0.4948, ShortRatio : 0.4569
+Step : 15800, Balance : 810.3730, DrawDown : 0.19, Long : 285, Short : 749, LongRatio : 0.4842, ShortRatio : 0.4900
+Step : 16000, Balance : 809.8120, DrawDown : 0.19, Long : 276, Short : 746, LongRatio : 0.4457, ShortRatio : 0.4786
+Step : 16200, Balance : 827.8800, DrawDown : 0.17, Long : 251, Short : 698, LongRatio : 0.5697, ShortRatio : 0.5100
+Step : 16400, Balance : 824.4020, DrawDown : 0.18, Long : 253, Short : 717, LongRatio : 0.5336, ShortRatio : 0.5035
+Step : 16600, Balance : 827.3000, DrawDown : 0.17, Long : 249, Short : 679, LongRatio : 0.5020, ShortRatio : 0.5022
+Step : 16800, Balance : 828.9980, DrawDown : 0.17, Long : 222, Short : 660, LongRatio : 0.4955, ShortRatio : 0.4803
+Step : 17000, Balance : 811.1420, DrawDown : 0.19, Long : 275, Short : 702, LongRatio : 0.4727, ShortRatio : 0.4729
+Step : 17200, Balance : 815.9800, DrawDown : 0.18, Long : 277, Short : 708, LongRatio : 0.5812, ShortRatio : 0.4633
+Step : 17400, Balance : 818.4640, DrawDown : 0.18, Long : 244, Short : 652, LongRatio : 0.4713, ShortRatio : 0.4709
+Step : 17600, Balance : 822.0690, DrawDown : 0.18, Long : 237, Short : 650, LongRatio : 0.4979, ShortRatio : 0.5062
+Step : 17800, Balance : 825.3760, DrawDown : 0.17, Long : 218, Short : 651, LongRatio : 0.5734, ShortRatio : 0.4716
+Step : 18000, Balance : 842.6580, DrawDown : 0.16, Long : 222, Short : 635, LongRatio : 0.4910, ShortRatio : 0.5417
+Step : 18200, Balance : 829.2880, DrawDown : 0.17, Long : 212, Short : 603, LongRatio : 0.4623, ShortRatio : 0.4726
+Step : 18400, Balance : 825.9880, DrawDown : 0.17, Long : 248, Short : 657, LongRatio : 0.5161, ShortRatio : 0.4962
+Step : 18600, Balance : 831.9810, DrawDown : 0.17, Long : 225, Short : 621, LongRatio : 0.5244, ShortRatio : 0.4718
+Step : 18800, Balance : 834.4210, DrawDown : 0.17, Long : 217, Short : 608, LongRatio : 0.4977, ShortRatio : 0.4934
+Step : 19000, Balance : 833.5660, DrawDown : 0.17, Long : 202, Short : 585, LongRatio : 0.4752, ShortRatio : 0.4786
+Step : 19200, Balance : 820.6680, DrawDown : 0.18, Long : 210, Short : 611, LongRatio : 0.4857, ShortRatio : 0.4501
+Step : 19400, Balance : 836.7360, DrawDown : 0.16, Long : 181, Short : 549, LongRatio : 0.5193, ShortRatio : 0.4627
+Step : 19600, Balance : 832.4860, DrawDown : 0.17, Long : 203, Short : 605, LongRatio : 0.4483, ShortRatio : 0.4909
+Step : 19800, Balance : 825.6050, DrawDown : 0.17, Long : 209, Short : 599, LongRatio : 0.4067, ShortRatio : 0.4591
+Step : 20000, Balance : 844.0940, DrawDown : 0.16, Long : 188, Short : 548, LongRatio : 0.4947, ShortRatio : 0.4964
+Step : 20200, Balance : 841.6200, DrawDown : 0.16, Long : 171, Short : 542, LongRatio : 0.4561, ShortRatio : 0.5018
+Step : 20400, Balance : 839.0280, DrawDown : 0.16, Long : 191, Short : 564, LongRatio : 0.5183, ShortRatio : 0.5142
+Step : 20600, Balance : 849.1810, DrawDown : 0.15, Long : 171, Short : 538, LongRatio : 0.5380, ShortRatio : 0.5335
+Step : 20800, Balance : 852.7720, DrawDown : 0.15, Long : 156, Short : 507, LongRatio : 0.4359, ShortRatio : 0.5069
+Step : 21000, Balance : 848.2310, DrawDown : 0.15, Long : 158, Short : 506, LongRatio : 0.5000, ShortRatio : 0.5257
+Step : 21200, Balance : 837.2980, DrawDown : 0.16, Long : 162, Short : 534, LongRatio : 0.5494, ShortRatio : 0.4813
+Step : 21400, Balance : 845.2930, DrawDown : 0.15, Long : 157, Short : 505, LongRatio : 0.5032, ShortRatio : 0.4871
+Step : 21600, Balance : 845.5660, DrawDown : 0.15, Long : 169, Short : 506, LongRatio : 0.4438, ShortRatio : 0.4862
+Step : 21800, Balance : 851.7390, DrawDown : 0.15, Long : 145, Short : 494, LongRatio : 0.5241, ShortRatio : 0.4696
+Step : 22000, Balance : 848.6400, DrawDown : 0.15, Long : 170, Short : 508, LongRatio : 0.5176, ShortRatio : 0.4843
+Step : 22200, Balance : 851.8800, DrawDown : 0.15, Long : 152, Short : 493, LongRatio : 0.5066, ShortRatio : 0.5071
+Step : 22400, Balance : 849.8890, DrawDown : 0.15, Long : 145, Short : 485, LongRatio : 0.4966, ShortRatio : 0.4990
+Step : 22600, Balance : 862.7470, DrawDown : 0.14, Long : 146, Short : 488, LongRatio : 0.5616, ShortRatio : 0.5512
+Step : 22800, Balance : 847.5130, DrawDown : 0.15, Long : 156, Short : 475, LongRatio : 0.5192, ShortRatio : 0.4358
+Step : 23000, Balance : 850.4910, DrawDown : 0.15, Long : 153, Short : 492, LongRatio : 0.5490, ShortRatio : 0.5224
+Step : 23200, Balance : 855.5130, DrawDown : 0.14, Long : 108, Short : 435, LongRatio : 0.5463, ShortRatio : 0.4529
+Step : 23400, Balance : 857.1700, DrawDown : 0.14, Long : 131, Short : 454, LongRatio : 0.5191, ShortRatio : 0.4912
+Step : 23600, Balance : 854.9760, DrawDown : 0.15, Long : 138, Short : 465, LongRatio : 0.5290, ShortRatio : 0.4989
+Step : 23800, Balance : 854.6230, DrawDown : 0.15, Long : 124, Short : 449, LongRatio : 0.4597, ShortRatio : 0.4610
+Step : 24000, Balance : 858.3130, DrawDown : 0.14, Long : 124, Short : 430, LongRatio : 0.4435, ShortRatio : 0.4930
+Step : 24200, Balance : 861.5960, DrawDown : 0.14, Long : 106, Short : 419, LongRatio : 0.5849, ShortRatio : 0.5203
+Step : 24400, Balance : 857.0250, DrawDown : 0.14, Long : 111, Short : 444, LongRatio : 0.4324, ShortRatio : 0.5135
+Step : 24600, Balance : 858.2720, DrawDown : 0.14, Long : 124, Short : 434, LongRatio : 0.5081, ShortRatio : 0.4654
+Step : 24800, Balance : 857.4730, DrawDown : 0.14, Long : 108, Short : 420, LongRatio : 0.5000, ShortRatio : 0.4500
+Step : 25000, Balance : 862.4870, DrawDown : 0.14, Long : 114, Short : 425, LongRatio : 0.5263, ShortRatio : 0.5224
+Step : 25200, Balance : 855.8000, DrawDown : 0.14, Long : 107, Short : 411, LongRatio : 0.3832, ShortRatio : 0.4696
+Step : 25400, Balance : 865.6060, DrawDown : 0.13, Long : 103, Short : 391, LongRatio : 0.6311, ShortRatio : 0.4859
+Step : 25600, Balance : 860.1420, DrawDown : 0.14, Long : 116, Short : 412, LongRatio : 0.4310, ShortRatio : 0.4733
+Step : 25800, Balance : 861.3920, DrawDown : 0.14, Long : 105, Short : 403, LongRatio : 0.4857, ShortRatio : 0.4988
+Step : 26000, Balance : 863.3240, DrawDown : 0.14, Long : 91, Short : 391, LongRatio : 0.5165, ShortRatio : 0.4425
+Step : 26200, Balance : 869.6380, DrawDown : 0.13, Long : 98, Short : 398, LongRatio : 0.4286, ShortRatio : 0.5226
+Step : 26400, Balance : 867.2730, DrawDown : 0.13, Long : 80, Short : 383, LongRatio : 0.5875, ShortRatio : 0.5065
+Step : 26600, Balance : 864.2410, DrawDown : 0.14, Long : 100, Short : 383, LongRatio : 0.5300, ShortRatio : 0.5117
+Step : 26800, Balance : 867.8370, DrawDown : 0.13, Long : 80, Short : 360, LongRatio : 0.5125, ShortRatio : 0.5056
+Step : 27000, Balance : 866.5640, DrawDown : 0.13, Long : 90, Short : 396, LongRatio : 0.4778, ShortRatio : 0.4949
+Step : 27200, Balance : 866.9100, DrawDown : 0.13, Long : 97, Short : 374, LongRatio : 0.4330, ShortRatio : 0.5267
+Step : 27400, Balance : 871.0500, DrawDown : 0.13, Long : 73, Short : 357, LongRatio : 0.5205, ShortRatio : 0.5014
+Step : 27600, Balance : 857.9080, DrawDown : 0.14, Long : 105, Short : 395, LongRatio : 0.4952, ShortRatio : 0.4835
+Step : 27800, Balance : 867.1760, DrawDown : 0.13, Long : 90, Short : 368, LongRatio : 0.5000, ShortRatio : 0.4755
+Step : 28000, Balance : 868.3530, DrawDown : 0.13, Long : 89, Short : 360, LongRatio : 0.4382, ShortRatio : 0.4639
+Step : 28200, Balance : 866.3860, DrawDown : 0.13, Long : 95, Short : 372, LongRatio : 0.5158, ShortRatio : 0.4946
+Step : 28400, Balance : 866.8610, DrawDown : 0.13, Long : 63, Short : 351, LongRatio : 0.5556, ShortRatio : 0.4729
+Step : 28600, Balance : 869.0120, DrawDown : 0.13, Long : 81, Short : 357, LongRatio : 0.4691, ShortRatio : 0.5126
+Step : 28800, Balance : 869.9890, DrawDown : 0.13, Long : 71, Short : 350, LongRatio : 0.4930, ShortRatio : 0.5057
+Step : 29000, Balance : 865.6280, DrawDown : 0.13, Long : 78, Short : 353, LongRatio : 0.4744, ShortRatio : 0.4958
+Step : 29200, Balance : 869.0110, DrawDown : 0.13, Long : 62, Short : 327, LongRatio : 0.4839, ShortRatio : 0.4495
+Step : 29400, Balance : 870.1760, DrawDown : 0.13, Long : 65, Short : 329, LongRatio : 0.5385, ShortRatio : 0.4529
+Step : 29600, Balance : 872.1290, DrawDown : 0.13, Long : 72, Short : 341, LongRatio : 0.6111, ShortRatio : 0.5103
+Step : 29800, Balance : 876.2890, DrawDown : 0.12, Long : 52, Short : 312, LongRatio : 0.5000, ShortRatio : 0.4583
+Step : 30000, Balance : 863.2840, DrawDown : 0.14, Long : 78, Short : 345, LongRatio : 0.4487, ShortRatio : 0.4754
+Step : 30200, Balance : 873.1160, DrawDown : 0.13, Long : 65, Short : 316, LongRatio : 0.4923, ShortRatio : 0.4810
+Step : 30400, Balance : 879.1510, DrawDown : 0.12, Long : 51, Short : 319, LongRatio : 0.5490, ShortRatio : 0.5204
+Step : 30600, Balance : 875.6320, DrawDown : 0.13, Long : 68, Short : 324, LongRatio : 0.4412, ShortRatio : 0.4691
+Step : 30800, Balance : 876.4690, DrawDown : 0.12, Long : 73, Short : 308, LongRatio : 0.4247, ShortRatio : 0.4838
+Step : 31000, Balance : 874.6680, DrawDown : 0.13, Long : 64, Short : 322, LongRatio : 0.5469, ShortRatio : 0.5124
+Step : 31200, Balance : 877.4810, DrawDown : 0.12, Long : 50, Short : 297, LongRatio : 0.4000, ShortRatio : 0.5152
+Step : 31400, Balance : 876.4290, DrawDown : 0.12, Long : 55, Short : 298, LongRatio : 0.4182, ShortRatio : 0.4799
+Step : 31600, Balance : 867.6970, DrawDown : 0.13, Long : 59, Short : 326, LongRatio : 0.4068, ShortRatio : 0.4663
+Step : 31800, Balance : 880.2130, DrawDown : 0.12, Long : 61, Short : 308, LongRatio : 0.5082, ShortRatio : 0.5325
+Step : 32000, Balance : 871.6840, DrawDown : 0.13, Long : 67, Short : 322, LongRatio : 0.4627, ShortRatio : 0.4720
+Step : 32200, Balance : 875.0310, DrawDown : 0.12, Long : 48, Short : 294, LongRatio : 0.3958, ShortRatio : 0.4728
+Step : 32400, Balance : 874.5620, DrawDown : 0.13, Long : 54, Short : 313, LongRatio : 0.5556, ShortRatio : 0.4920
+Step : 32600, Balance : 875.8320, DrawDown : 0.12, Long : 47, Short : 295, LongRatio : 0.4894, ShortRatio : 0.4983
+Step : 32800, Balance : 876.2210, DrawDown : 0.12, Long : 44, Short : 298, LongRatio : 0.5682, ShortRatio : 0.4866
+Step : 33000, Balance : 881.0270, DrawDown : 0.12, Long : 50, Short : 301, LongRatio : 0.6000, ShortRatio : 0.5017
+Step : 33200, Balance : 880.1250, DrawDown : 0.12, Long : 47, Short : 284, LongRatio : 0.6383, ShortRatio : 0.4894
+Step : 33400, Balance : 876.1420, DrawDown : 0.12, Long : 54, Short : 293, LongRatio : 0.5926, ShortRatio : 0.4744
+Step : 33600, Balance : 876.5850, DrawDown : 0.12, Long : 42, Short : 284, LongRatio : 0.4048, ShortRatio : 0.4930
+Step : 33800, Balance : 880.9720, DrawDown : 0.12, Long : 36, Short : 296, LongRatio : 0.5556, ShortRatio : 0.4662
+Step : 34000, Balance : 880.4540, DrawDown : 0.12, Long : 49, Short : 277, LongRatio : 0.5510, ShortRatio : 0.4585
+Step : 34200, Balance : 875.7010, DrawDown : 0.12, Long : 53, Short : 295, LongRatio : 0.5849, ShortRatio : 0.4881
+Step : 34400, Balance : 878.5770, DrawDown : 0.12, Long : 24, Short : 265, LongRatio : 0.3750, ShortRatio : 0.4566
+Step : 34600, Balance : 872.5930, DrawDown : 0.13, Long : 51, Short : 293, LongRatio : 0.5294, ShortRatio : 0.4403
+Step : 34800, Balance : 873.5650, DrawDown : 0.13, Long : 42, Short : 274, LongRatio : 0.5000, ShortRatio : 0.4307
+Step : 35000, Balance : 876.2790, DrawDown : 0.12, Long : 46, Short : 279, LongRatio : 0.5652, ShortRatio : 0.4767
+Step : 35200, Balance : 880.1650, DrawDown : 0.12, Long : 28, Short : 266, LongRatio : 0.4643, ShortRatio : 0.5000
+Step : 35400, Balance : 880.7910, DrawDown : 0.12, Long : 36, Short : 284, LongRatio : 0.5833, ShortRatio : 0.4824
+Step : 35600, Balance : 880.7380, DrawDown : 0.12, Long : 46, Short : 279, LongRatio : 0.4348, ShortRatio : 0.5125
+Step : 35800, Balance : 878.1440, DrawDown : 0.12, Long : 43, Short : 277, LongRatio : 0.5581, ShortRatio : 0.5018
+Step : 36000, Balance : 879.4620, DrawDown : 0.12, Long : 35, Short : 265, LongRatio : 0.5143, ShortRatio : 0.4755
+Step : 36200, Balance : 882.4240, DrawDown : 0.12, Long : 27, Short : 255, LongRatio : 0.4074, ShortRatio : 0.4784
+Step : 36400, Balance : 879.1980, DrawDown : 0.12, Long : 43, Short : 281, LongRatio : 0.5116, ShortRatio : 0.4947
+Step : 36600, Balance : 876.1830, DrawDown : 0.12, Long : 43, Short : 278, LongRatio : 0.6512, ShortRatio : 0.4209
+Step : 36800, Balance : 880.9740, DrawDown : 0.12, Long : 29, Short : 265, LongRatio : 0.3793, ShortRatio : 0.5208
+Step : 37000, Balance : 882.8170, DrawDown : 0.12, Long : 29, Short : 254, LongRatio : 0.4483, ShortRatio : 0.5039
+Step : 37200, Balance : 882.8830, DrawDown : 0.12, Long : 37, Short : 270, LongRatio : 0.5676, ShortRatio : 0.4926
+Step : 37400, Balance : 889.9320, DrawDown : 0.11, Long : 36, Short : 264, LongRatio : 0.6667, ShortRatio : 0.5189
+Step : 37600, Balance : 880.3290, DrawDown : 0.12, Long : 36, Short : 260, LongRatio : 0.3889, ShortRatio : 0.4385
+Step : 37800, Balance : 879.5030, DrawDown : 0.12, Long : 27, Short : 251, LongRatio : 0.6667, ShortRatio : 0.4303
+Step : 38000, Balance : 886.9360, DrawDown : 0.11, Long : 31, Short : 260, LongRatio : 0.4839, ShortRatio : 0.5269
+Step : 38200, Balance : 889.6500, DrawDown : 0.11, Long : 25, Short : 249, LongRatio : 0.4800, ShortRatio : 0.5341
+Step : 38400, Balance : 881.2440, DrawDown : 0.12, Long : 24, Short : 247, LongRatio : 0.4583, ShortRatio : 0.4980
+Step : 38600, Balance : 883.5750, DrawDown : 0.12, Long : 20, Short : 244, LongRatio : 0.6000, ShortRatio : 0.4672
+Step : 38800, Balance : 882.6210, DrawDown : 0.12, Long : 18, Short : 253, LongRatio : 0.3889, ShortRatio : 0.4625
+Step : 39000, Balance : 885.1070, DrawDown : 0.11, Long : 23, Short : 248, LongRatio : 0.4783, ShortRatio : 0.4919
+Step : 39200, Balance : 878.5290, DrawDown : 0.12, Long : 34, Short : 257, LongRatio : 0.5000, ShortRatio : 0.4591
+Step : 39400, Balance : 880.3790, DrawDown : 0.12, Long : 25, Short : 256, LongRatio : 0.7200, ShortRatio : 0.4688
+Step : 39600, Balance : 883.3750, DrawDown : 0.12, Long : 29, Short : 253, LongRatio : 0.4828, ShortRatio : 0.4625
+Step : 39800, Balance : 876.1500, DrawDown : 0.12, Long : 28, Short : 251, LongRatio : 0.5000, ShortRatio : 0.4661
+Step : 40000, Balance : 884.7580, DrawDown : 0.12, Long : 23, Short : 251, LongRatio : 0.5652, ShortRatio : 0.5219
+Step : 40200, Balance : 885.6860, DrawDown : 0.11, Long : 26, Short : 250, LongRatio : 0.5769, ShortRatio : 0.5280
+Step : 40400, Balance : 882.2640, DrawDown : 0.12, Long : 18, Short : 235, LongRatio : 0.6111, ShortRatio : 0.5149
+Step : 40600, Balance : 885.1650, DrawDown : 0.11, Long : 30, Short : 254, LongRatio : 0.6667, ShortRatio : 0.5039
+Step : 40800, Balance : 885.5550, DrawDown : 0.11, Long : 21, Short : 237, LongRatio : 0.6190, ShortRatio : 0.4852
+Step : 41000, Balance : 883.6080, DrawDown : 0.12, Long : 14, Short : 235, LongRatio : 0.5000, ShortRatio : 0.4553
+Step : 41200, Balance : 883.7060, DrawDown : 0.12, Long : 13, Short : 235, LongRatio : 0.3846, ShortRatio : 0.4426
+Step : 41400, Balance : 884.8250, DrawDown : 0.12, Long : 21, Short : 237, LongRatio : 0.5238, ShortRatio : 0.5316
+Step : 41600, Balance : 889.8150, DrawDown : 0.11, Long : 15, Short : 228, LongRatio : 0.6000, ShortRatio : 0.5219
+Step : 41800, Balance : 882.3650, DrawDown : 0.12, Long : 28, Short : 260, LongRatio : 0.7500, ShortRatio : 0.4769
+Step : 42000, Balance : 883.1310, DrawDown : 0.12, Long : 16, Short : 238, LongRatio : 0.2500, ShortRatio : 0.5126
+Step : 42200, Balance : 882.3230, DrawDown : 0.12, Long : 22, Short : 239, LongRatio : 0.6364, ShortRatio : 0.5146
+Step : 42400, Balance : 887.5630, DrawDown : 0.11, Long : 18, Short : 235, LongRatio : 0.5000, ShortRatio : 0.5149
+Step : 42600, Balance : 882.1620, DrawDown : 0.12, Long : 25, Short : 246, LongRatio : 0.4800, ShortRatio : 0.5244
+Step : 42800, Balance : 886.1270, DrawDown : 0.11, Long : 21, Short : 235, LongRatio : 0.4286, ShortRatio : 0.5149
+Step : 43000, Balance : 887.3900, DrawDown : 0.11, Long : 19, Short : 235, LongRatio : 0.5263, ShortRatio : 0.5489
+Step : 43200, Balance : 886.8180, DrawDown : 0.11, Long : 18, Short : 234, LongRatio : 0.6111, ShortRatio : 0.4872
+Step : 43400, Balance : 886.2770, DrawDown : 0.11, Long : 20, Short : 234, LongRatio : 0.5500, ShortRatio : 0.5256
+Step : 43600, Balance : 880.9430, DrawDown : 0.12, Long : 12, Short : 227, LongRatio : 0.5000, ShortRatio : 0.4405
+Step : 43800, Balance : 882.9970, DrawDown : 0.12, Long : 18, Short : 235, LongRatio : 0.5556, ShortRatio : 0.4596
+Step : 44000, Balance : 883.4920, DrawDown : 0.12, Long : 15, Short : 238, LongRatio : 0.3333, ShortRatio : 0.4622
+Step : 44200, Balance : 882.7810, DrawDown : 0.12, Long : 17, Short : 243, LongRatio : 0.5294, ShortRatio : 0.4815
+Step : 44400, Balance : 881.0980, DrawDown : 0.12, Long : 16, Short : 234, LongRatio : 0.3125, ShortRatio : 0.4872
+Step : 44600, Balance : 887.4910, DrawDown : 0.11, Long : 13, Short : 230, LongRatio : 0.3077, ShortRatio : 0.5391
+Step : 44800, Balance : 887.5570, DrawDown : 0.11, Long : 19, Short : 236, LongRatio : 0.3684, ShortRatio : 0.5466
+Step : 45000, Balance : 886.3420, DrawDown : 0.11, Long : 14, Short : 235, LongRatio : 0.5000, ShortRatio : 0.5021
+Step : 45200, Balance : 884.5370, DrawDown : 0.12, Long : 12, Short : 226, LongRatio : 0.4167, ShortRatio : 0.4381
+Step : 45400, Balance : 889.2560, DrawDown : 0.11, Long : 10, Short : 219, LongRatio : 0.2000, ShortRatio : 0.5342

@@ -79,16 +79,20 @@ There are two neural networks, target and main.
 
 ### 3. Reulst
 ![Result Text](https://github.com/frogkim/publishdata/blob/main/images/ForexTradingLearning/result.png)  
-This is "result.txt" file. Trading result looks bad.  
+![Result Tensorboard](https://github.com/frogkim/publishdata/blob/main/images/ForexTradingLearning/tensorboard.png)
+Trading result looks bad, but getting better.
+Its profit is negative, but balance grows gradually.  
 
+![Result Gragh](https://github.com/frogkim/publishdata/blob/main/images/ForexTradingLearning/result2.png)
+However, it is the result by reducing opening training.    
 
-![Result Tensorboard](https://github.com/frogkim/publishdata/blob/main/images/ForexTradingLearning/tensorboard.png)  
-It is a graph about difference between logits and labels.  
-It shows that trading is successful.  
 
 ### 4. Conclusion  
-Trading result is not good, but it shows it successfully reduces its difference between prediction and labels.  
-It is supposed that learning target is not adequate.  
+It is confirmed that machine is learning. However, machine's action is different with intened action.
+Goal is to make profit, but the machine's choice is to do nothing.
+
+
+
 
 
 ### Reference  

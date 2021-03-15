@@ -22,6 +22,7 @@ class NUERALS:
             # placeholder X and Y
             self._x = tf.placeholder(tf.float32, [None, self.learning_sample_lines, self.input_size], name="input_x")
             self._y = tf.placeholder(tf.float32, [None, 1, self.output_size], name="input_y")
+            self._balance = tf.placeholder(tf.float32, name="Balance")
 
         with tf.variable_scope(self.net_name + "LSTM"):
             convert_i = self._CreateVariable("_convert_", 0, self.input_size, self.neural_size)
@@ -48,12 +49,14 @@ class NUERALS:
         root_logdir = "tf_logs"
         logdir = "{}/run-{}/".format(root_logdir, now)
         self.mse_summary = tf.summary.scalar('MSE', self.loss)
+        self.bal_summary = tf.summary.scalar('BALANCE', self._balance)
         self.file_writer = tf.summary.FileWriter(logdir, tf.get_default_graph())
 
     # build network    # predict
 
-    def StoreGraph(self, summary_str, step):
+    def StoreGraph(self, summary_str, balance_str, step):
         self.file_writer.add_summary(summary_str, step)
+        self.file_writer.add_summary(balance_str, int(step/200))
 
     def GraphClose(self):
         self.file_writer.close()
@@ -62,12 +65,15 @@ class NUERALS:
         return self.session.run(self.pred, feed_dict={self._x: x_stack})
 
     # learning
-    def Update(self, x_stack, y_stack):
-        return self.session.run([self.loss, self.train, self.mse_summary],
-                                feed_dict={self._x: x_stack, self._y: y_stack})
+    def Update(self, x_stack, y_stack, balance):
+        return self.session.run([self.loss, self.train, self.mse_summary, self.bal_summary],
+                                feed_dict={self._x: x_stack, self._y: y_stack, self._balance: balance})
 
-    def Copy(self, other):
-        for i in range(len(self.copy_list)): tf.assign(self.copy_list[i], other.copy_list[i])
+    def CopyOps(self, other):
+        self._Copy_op = [self.copy_list[i].assign(other.copy_list[i]) for i in range(len(self.copy_list))]
+
+    def Copy(self):
+        self.session.run(self._Copy_op)
 
     def _CreateVariable(self, name, number, i_size, o_size):
         weight_name = self.net_name + name + str(number)

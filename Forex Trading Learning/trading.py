@@ -23,8 +23,8 @@ class TRADING:
         self.short_loss = 0
         self.short_rate = 0
 
-        self.step = 1e-5
-        self.fee = 1e-5 * 20
+        self.step = 1e-5 * 5
+        self.fee = 1e-5 * 50
 
     def SetGUI(self, gui):
         self.gui = gui
@@ -34,7 +34,7 @@ class TRADING:
         self.short = self.short_win + self.short_loss
 
         self.gui.SetBalance("{:0.4f}".format(self.balance))
-        self.gui.SetDrawDown("{:0.2f} %".format(self.drawDown))
+        self.gui.SetDrawDown("{:0.4f}".format(self.drawDown))
         self.gui.SetLong(self.long)
         self.gui.SetLongWin(self.long_win)
         self.gui.SetLongLoss(self.long_loss)
@@ -46,13 +46,18 @@ class TRADING:
         if self.long > 0: self.gui.SetLongRate(("{:0.4f}".format(self.long_win / self.long)))
         if self.short > 0: self.gui.SetShortRate(("{:0.4f}".format(self.short_win / self.short)))
 
+    def GetBalance(self):
+        return self.balance
+
     def Reset(self, step):
         if self.long != 0 and self.short != 0:
             message = "Step : " + str(step)
             message += ", Balance : {:0.4f}".format(self.balance)
             message += ", DrawDown : {:0.2f}".format(self.drawDown)
-            message += ", Long : {:0.4f}".format(self.long_win / self.long)
-            message += ", Short : {:0.4f}".format(self.short_win / self.short)
+            message += ", Long : {0}".format(self.long)
+            message += ", Short : {0}".format(self.short)
+            message += ", LongRatio : {:0.4f}".format(self.long_win / self.long)
+            message += ", ShortRatio : {:0.4f}".format(self.short_win / self.short)
             print(message)
             f = open("result.txt", "a")
             f.write(message)
@@ -76,7 +81,7 @@ class TRADING:
 
     def Play(self, index, state, action):
         result = 0
-        profit = self.x_price[0, index + 1, 0] - self.x_price[0, index, 0]
+        profit = self.x_price[0, index, 0] - self.x_price[0, index-1, 0]
 
         if state == 0:
             if action == 0:
@@ -116,28 +121,12 @@ class TRADING:
                 if action == 0:
                     result -= self.fee
 
-        lot = int(self.balance / 1000) + 10
+        lot = int(self.balance / 1000)
+        if lot == 0: lot = 1
+        lot = lot * 100
         self.balance += result * lot
         if self.maxBalance < self.balance: self.maxBalance = self.balance
         if self.minBalance > self.balance: self.minBalance = self.balance
-        self.drawDown = ((self.maxBalance - self.minBalance) / self.maxBalance) * 100
+        self.drawDown = (self.maxBalance - self.minBalance) / self.maxBalance
         self.UpdateGUI()
-        return result
-
-    def Close(self, index, state):
-        result = 0
-        profit = self.x_price[0, index + 1, 0] - self.x_price[0, index, 0]
-
-        if state == 0:
-            result -= profit
-            if -profit > 0:
-                self.short_win += 1
-            else:
-                self.short_loss += 1
-        else:
-            result += profit
-            if profit > 0:
-                self.long_win += 1
-            else:
-                self.long_loss += 1
         return result
