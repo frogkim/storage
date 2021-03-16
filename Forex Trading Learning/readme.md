@@ -79,21 +79,26 @@ There are two neural networks, target and main.
 
 ### 3. Reulst
 ![Result Text](https://github.com/frogkim/publishdata/blob/main/images/ForexTradingLearning/result.png)  
+Trading result graph shows increasing but decaying progress.
+It shows that the machine is learning strategy and take better strategy to trade.
+However, it could not make a profit. Starting balance is 1,000.
+Its best performance under 900. It is success to reduce loss, but it is still net loss.  
+
 ![Result Tensorboard](https://github.com/frogkim/publishdata/blob/main/images/ForexTradingLearning/tensorboard.png)  
-Trading result looks bad, but getting better.  
-Its profit is negative, but balance grows gradually.  
+Tensorboard is tool of tensorflow for visualization.  
+MSE(Mean Square Error) is error term between a machine's prediction and target.  
+This graph shows that learning is successful.  
+
 
 ![Result Gragh](https://github.com/frogkim/publishdata/blob/main/images/ForexTradingLearning/result2.png)  
-However, it is the result by reducing opening training.    
+This graph shows opening positions of long and short.  
+It is supposed that the successful factor to reduce loss is to reduce trading.   
 
 
 ### 4. Conclusion  
-It is confirmed that machine is learning. However, machine's action is different with intened action.  
-Goal is to make profit, but the machine's choice is to do nothing.
-
-
-
-
+The Machine's learning process successful.  
+The reason of low profit is caused by learning design.  
+It needs to confirm learning target and input data.   
 
 ### Reference  
 Mnih, V., Kavukcuoglu, K., Silver, D. et al.  Human-level control through deep reinforcement learning. Nature 518, 529–533 (2015).  
