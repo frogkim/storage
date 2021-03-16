@@ -79,16 +79,16 @@ There are two neural networks, target and main.
 
 ### 3. Reulst
 ![Result Text](https://github.com/frogkim/publishdata/blob/main/images/ForexTradingLearning/result.png)  
-![Result Tensorboard](https://github.com/frogkim/publishdata/blob/main/images/ForexTradingLearning/tensorboard.png)
-Trading result looks bad, but getting better.
+![Result Tensorboard](https://github.com/frogkim/publishdata/blob/main/images/ForexTradingLearning/tensorboard.png)  
+Trading result looks bad, but getting better.  
 Its profit is negative, but balance grows gradually.  
 
-![Result Gragh](https://github.com/frogkim/publishdata/blob/main/images/ForexTradingLearning/result2.png)
+![Result Gragh](https://github.com/frogkim/publishdata/blob/main/images/ForexTradingLearning/result2.png)  
 However, it is the result by reducing opening training.    
 
 
 ### 4. Conclusion  
-It is confirmed that machine is learning. However, machine's action is different with intened action.
+It is confirmed that machine is learning. However, machine's action is different with intened action.  
 Goal is to make profit, but the machine's choice is to do nothing.
 
 
