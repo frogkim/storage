@@ -145,11 +145,14 @@ class MACHINE:
         while self.switch > -1:
             if self.switch == 0:
                 continue
+
             q_stack = np.zeros([oneGameTime, 3])
             actions = np.ones(oneGameTime)
             self.count += 1
-            index = random.randrange(startIndex, totalIndex - oneGameTime -learning_sample_lines - 1)
-            x_sample = self.x_avg[index: index + learning_sample_lines+ oneGameTime, :]
+            index = random.randrange(startIndex, totalIndex - oneGameTime - learning_sample_lines - 1)
+            state = (state + 1) % 3
+            if state == 0 or state == 2: self.trading.SetOpenPrice(index-1)
+            x_sample = self.x_avg[index: index + learning_sample_lines + oneGameTime, :]
             for i in range(oneGameTime):
                 if self.switch == 0: break
                 if random.random() < epsilon:
@@ -159,15 +162,20 @@ class MACHINE:
                     x_stack = x_stack.reshape([1, learning_sample_lines, avgs])
                     x_stack = self._normalize(x_stack)
                     prediction = self.targetDQN.Predict(x_stack)
-                    action = np.argmax(prediction[0,0])
-                reward = self.trading.Play(index + i + learning_sample_lines -1, state, action)
+
+                    if np.max(prediction[0]) == 0:
+                        action = 1
+                    else:
+                        action = np.argmax(prediction[0])
+
+                reward = self.trading.Play(index + i + learning_sample_lines, state, action)
                 # In this game, the player cannot affect to environment
                 # It is not used to store state
                 q_stack[i, action] = reward
                 actions[i] = action
                 state = action
             # close action
-            reward = self.trading.Play(index + oneGameTime + learning_sample_lines - 1, state, 1)
+            reward = self.trading.Play(index + oneGameTime + learning_sample_lines, state, 1)
             q_stack[oneGameTime - 1, state] += reward
 
             for i in range(oneGameTime - 2, -1):
@@ -188,7 +196,7 @@ class MACHINE:
             step += 1
             epsilon = epsilon * 0.9999
             if epsilon < 1e-4:
-                epsilon = 0.2
+                epsilon = 0.1
                 print("epsilon is smaller than 1e-4")
 
             self.gui.SetTotal(self.count)
