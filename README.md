@@ -11,15 +11,15 @@
   - Haloween ornament(ARM assembly language)
   
 ### 3. Brewing helper (working)
-  - Server: BGM220P Board
-  	Made in Simplicity Studio environment (C base)
-	Check and store data about temperature and ethanol level
-	Transmit data to client if there is a request.
+  - Server: BGM220P Board  
+  	Made in Simplicity Studio environment (C base)  
+	Check and store data about temperature and ethanol level  
+	Transmit data to client if there is a request.  
 	
-  - Client: Android Application
-	Made in Android Studio environment (Kotlin base)
-	Receive data from server
-	Save data as a file
-	Show current temperature and ethanol level
-	Show historic data about temperature and ethanol level
+  - Client: Android Application  
+	Made in Android Studio environment (Kotlin base)  
+	Receive data from server  
+	Save data as a file  
+	Show current temperature and ethanol level  
+	Show historic data about temperature and ethanol level  
 
