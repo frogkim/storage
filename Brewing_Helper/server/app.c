@@ -47,7 +47,7 @@ static void ResistCalc(void);
 static float GetTemp(void);
 static float GetEthanol(float tmp);
 static void SetAdvData(void);
-static void SetScanData(void);
+//static void SetScanData(void);
 // custom global variable
 typedef struct{
     uint16_t year;
@@ -124,9 +124,11 @@ SL_WEAK void app_process_action(void)
             } else{
                     printf("O");
                     sampleCollect = 1;
+                    GPIO_PinOutClear(SL_EMLIB_GPIO_INIT_LED_PORT, SL_EMLIB_GPIO_INIT_LED_PIN);
+                    printf("\nBrewing helper is ready to start");
             }
     } else {
-            printf("\nADC0: %0.4f C,  ADC1: %0.4f", temparature, ethanol);
+
     }
 
 
@@ -142,12 +144,18 @@ void sl_bt_on_event(sl_bt_msg_t *evt)
 {
     switch (SL_BT_MSG_ID(evt->header)) {
         case sl_bt_evt_system_boot_id:
-            sl_bt_advertiser_create_set(&advertising_set_handle);
-            SetAdvData();
-            SetScanData();
-            sl_bt_advertiser_set_timing(advertising_set_handle, 1600, 1600, 0, 0);
-            //sl_bt_advertiser_start(advertising_set_handle, advertiser_general_discoverable, advertiser_connectable_scannable);
-            sl_bt_advertiser_start(advertising_set_handle, sl_bt_advertiser_general_discoverable, sl_bt_advertiser_connectable_scannable);
+            if( sl_bt_advertiser_create_set(&advertising_set_handle) == SL_STATUS_OK )
+                {
+                    GPIO_PinOutSet(SL_EMLIB_GPIO_INIT_LED_PORT, SL_EMLIB_GPIO_INIT_LED_PIN);
+                    SetAdvData();
+                    //SetScanData();
+                    sl_bt_advertiser_set_timing(advertising_set_handle, 1600, 1600, 0, 0);
+                    sl_bt_advertiser_start(advertising_set_handle, sl_bt_advertiser_general_discoverable, sl_bt_advertiser_connectable_scannable);
+                }
+            else
+                {
+                    printf("\nFailed to create advertiser set");
+                }
 
         break;
 
@@ -156,12 +164,17 @@ void sl_bt_on_event(sl_bt_msg_t *evt)
         break;
 
         case sl_bt_evt_connection_closed_id:                                                // connection was closed
-            //sl_bt_advertiser_start(advertising_set_handle, advertiser_general_discoverable, advertiser_connectable_scannable);
             sl_bt_advertiser_start(advertising_set_handle, sl_bt_advertiser_general_discoverable, sl_bt_advertiser_connectable_scannable);
         break;
 
         case sl_bt_evt_system_external_signal_id:
+            if(sampleCollect)
+                {
+                    if (evt->data.evt_system_external_signal.extsignals & ADC_DONE_SIGNAL) {
+                            printf("\nADC0: %0.4f C,  ADC1: %0.4f", temparature, ethanol);
+                    }
 
+                }
         break;
 
         default:
@@ -175,22 +188,23 @@ static void SetAdvData(void)
         uint8_t length;
         uint8_t flags;
         uint8_t data;
-    } advdataSTR;
-    advdataSTR advdata = {0x02, 0x01, 0x06};
-    sl_bt_advertiser_set_data(advertising_set_handle, 0, sizeof(advdataSTR), (uint8_t*)&advdata);
-}
-
-static void SetScanData(void){
-    typedef struct {
         uint8_t name_len;
         uint8_t name_type;
         char    name[15];
-    } scandataSTR;
-    scandataSTR scandata;
-    scandata.name_len = 15;
-    scandata.name_type = 0x09;
-    strncpy(scandata.name, "Highway start!", 14);
-    sl_bt_advertiser_set_data(advertising_set_handle, 1, sizeof(scandataSTR), (uint8_t*)&scandata);
+    } advdataSTR;
+
+    advdataSTR advdata;
+    advdata.length = 0x02;
+    advdata.flags = 0x01;
+    advdata.data = 0x06;
+    advdata.name_len = 0x0f;
+    advdata.name_type = 0x09;
+    char tmp[] = "Highway start!";
+    strncpy(advdata.name, tmp, sizeof(tmp)-1);
+    if( sl_bt_advertiser_set_data(advertising_set_handle, 0, sizeof(advdataSTR), (uint8_t*)&advdata) != SL_STATUS_OK)
+        {
+            printf("\nFailed to set advdata");
+        }
 }
 
 static void LETIMER_init(void)
@@ -341,4 +355,3 @@ static float GetEthanol(float tmp)
     float v = ADCMAX / ethnResist - 1;
     return v;
 }
-
